@@ -9,3 +9,6 @@ def profile(request):
 
 def login(request):
     return render(request, "accounts/login.html")
+
+def joinCommunity(request):
+    return render(request, "accounts/joincommunity.html")

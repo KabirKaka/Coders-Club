@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block cssLinksAndTitle %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+
+  <title>Join Community - Coder's Club</title>
+{% endblock cssLinksAndTitle %}
+{% block mainContent %}
+    <!-- Bread Crumb -->
+<div class="BreadCrumb ">
+    <img aria-label="breadcrumb" >
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="FrontPage.html">Home</a></li>
+          
+          <li class="breadcrumb-item active" aria-current="page">Join Our Club</li>
+        </ol>
+</div>
+
+<div class="container ClubSections">
+    <div class="row my-5">
+      <div class="col-12 paraDivClub">
+        <p id="text">Are you interested in learning how to code? Do you want to develop the skills needed to create websites and apps? Then our coding club is the perfect place for you!</p>
+          <p id="text1"> At our club, We offer a variety of resources, including video tutorials, coding challenges, webinars, and workshops. Our experienced mentors are always available to provide guidance and answer any questions you may have.</p>
+            <p id="text2">So why wait? Join our coding club today and start your journey to becoming a skilled programmer! </p>
+      </div>
+     
+    </div>
+    <div class="row my-5">
+         <div class="col-12 imgDivClub">
+          <video src="/assets/images/videoplayback.mp4" width="1078px" height= "400px" controls autoplay muted></video>
+      </div>
+    </div>
+
+
+
+     <!-- Community Form -->
+
+    <div class="container py-5 h-100 communityContainer">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-12 Registration">
+                <form class="card-body p-md-5 text-black formCommunity" method="post"  onsubmit="return validation();">
+                  <div class="Reg_flex" style="top:-29px !important;left: 0px !important;">
+
+                    <img id="regLogo mx-3" width="150" height="100" src="assets/images/Club/c2.jpg" alt="">
+                    <span class="mb-5 px-5 text-uppercase">Join Our Club</span>
+                  </div>
+                  <!-- radio button -->
+                  <div class="row d-md-flex">
+                    <div class="col-md-6 mb-4">
+                    <h5 class="mb-0 me-4">Join As a: </h5>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input regRadio" type="radio" name="Profession" id="TeamLead"
+                        value="option1" required />
+                      <label class="form-check-label" for="TeamLead">Team Lead</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input regRadio" type="radio" name="Profession" id="TeamMember"
+                        value="option2" />
+                      <label class="form-check-label" for="TeamMember">Team Member</label>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <select class="form-control multi-select selectpicker" multiple aria-label="default select example" placeholder="Select Domain/'s(Multiple)"  data-live-search="true" required >
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                      </select>
+                </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="form-outline">
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" placeholder="Link to Your Profile/Portfolio" required="required" />
+                          </div>
+                    </div>
+
+                  </div>
+
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="submit" class="btn btn-lg ms-2 RegBtn">Apply Now!</button>
+                  </div>
+                </div>
+  
+                
+                </form>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  
+    <div id="message" style="display: none;">
+        <div class="container py-5 h-100 communityContainer" >
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col">
+                <div class="card card-registration my-4">
+                  <div class="row g-0">
+                    <div class="col-xl-12 Registration">
+                      <form class="card-body p-md-5 text-black formCommunity" method="post"  onsubmit="return validation();">
+                        
+                       <h1 id="afterJoinCommHeading">Your Form Has Been Submitted!</h1>
+                       <p id="afterJoinComm">We will be in touch with you very soon!</p>
+                      
+                      </form>
+                      
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+{% endblock mainContent %}
+{% block jsLinks %}
+<script>
+    let subMenu;
+     subMenu= document.getElementById("subMenu");
+  function toggleMenu() {
+  subMenu.classList.toggle("open-menu");
+  }
+  </script>
+{% endblock jsLinks %}
