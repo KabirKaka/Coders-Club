@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+<!-- {% load static %} -->
+{% block cssLinksAndTitle %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<title>Gallery - Coder's Club</title>
+{% endblock cssLinksAndTitle %}
+{% block mainContent %}
+
+		<div id="gallery">
+			<div
+				class="gallery-home-content text-light position-absolute top-50 start-50 translate-middle">
+				<h1>Welcome</h1>
+				<h1>Coder's Club Gallery</h1>
+			</div>
+		</div>
+		<div class="gallery-album text-center mt-4">
+			<div class="gallery-cover">
+				<div class="gallery-cover-image"></div>
+				<div
+					class="gallery-cover-text d-flex justify-content-center align-item-center flex-column"
+				>
+					<h2 class="fs-1">WebKoder's Competition</h2>
+					<p class="fs-5">A Website Design and Development Competition</p>
+					<p class="fs-6">
+						Competition occur's between BCIT students of all batches
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="view-more ai-album text-center">
+			<div class="pictures">
+				<div class="pic-card">
+					<img src="../images/about-img-1.jpg" alt="">
+				</div>
+				<div class="pic-card">
+					<img src="../images/about-img-2.jpg" alt="">
+				</div>
+				<div class="pic-card">
+					<img src="../images/about-img-3.jpg" alt="">
+				</div>
+				<div class="pic-card">
+					<img src="../images/home1.jpg" alt="">
+				</div>
+				<div class="pic-card">
+					<img src="../images/home3.jpg" alt="">
+				</div>
+				<div class="pic-card">
+					<img src="../images/home4.jpg" alt="">
+				</div>
+				<div class="pic-card">
+					<img src="../images/home1.jpg" alt="">
+				</div>
+				<div class="pic-card">
+					<img src="../images/about-img-1.jpg" alt="">
+				</div>
+				<div class="pic-card">
+					<img src="../images/about-img-1.jpg" alt="">
+				</div>
+			</div>
+		</div>
+{% endblock mainContent %}
+
+{% block jsLinks %}
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+{% endblock jsLinks %}
