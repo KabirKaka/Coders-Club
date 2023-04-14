@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block cssLinksAndTitle %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+  <title>Contact - Coder's Club</title>
+{% endblock cssLinksAndTitle %}
+{% block mainContent %}
+    <!-- BreadCrumb Section -->
+        <div class="BreadCrumb" >
+            <img aria-label="breadcrumb" >
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="FrontPage.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                </ol>
+        </div>
+                <!-- Contact Area Section -->
+      <div class="Contact_Section" >
+        
+            <div id="contact" class="contact-area section-padding">
+                <div class="container">										
+                    <div class="section-title text-center"> 
+                        <span> GET IN TOUCH</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis dignissim. Aenean vitae metus in augue pretium ultrices.</p>
+                    </div>					
+                    <div class="row">
+                        <div class="col-lg-7">	
+                            <div class="contact ">
+                                <form class="form formContact" name="enq" method="post" action="contact.php" onsubmit="return validation(); "onsubmit="return ajaxpost()">
+                                    <div class="row formback">
+                                        <div class="form-group col-md-6 my-3 ">
+                                            <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                                        </div>
+                                        <div class="form-group col-md-6 my-3 ">
+                                            <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+                                        </div>
+                                        <div class="form-group col-md-12 my-3">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                                        </div>
+                                        <div class="form-group col-md-12 my-3">
+                                            <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+                                        </div>
+                                        
+                                      </div>
+                                      <div class="col-md-12 text-center" style="position: relative;left: 200px;">
+                                        <button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-contact-bg fw-bolder" title="Submit Your Message!">Send Message</button>
+                                      </div>
+                                      
+                                 
+                                </form>
+                            </div>
+                        </div><!--- END COL --> 
+                        <div class="col-lg-5 sideContact">
+                            <div class="single_address">
+                                <i class="ri-map-pin-line"></i>
+                                <h4>Our Address</h4>
+                                <p>NED University Of Engineering and Technology, CSIT Department</p>
+                            </div>
+                            <div class="single_address">
+                                <i class="ri-mail-fill"></i>
+                                <h4>Send your message</h4>
+                                <p>CSIT@cloud.neduet.edu.pk</p>
+                            </div>
+                            <div class="single_address">
+                                <i class="ri-phone-fill"></i>
+                                <h4>Call us on</h4>
+                                <p>(+92) 332-223-4010 </p>
+                            </div>
+                            <div class="single_address">
+                                <i class="ri-time-fill"></i>
+                                <h4>Work Time</h4>
+                                <p>Mon - Fri: 08.30 - 16.30. <br>Sat-Sun: OFF</p>
+                            </div>					
+                        </div><!--- END COL --> 
+                    </div><!--- END ROW -->
+                </div><!--- END CONTAINER -->	
+            </div>
+      </div>
+      
+{% endblock mainContent %}
+{% block jsLinks %}
+<script>
+    let subMenu;
+     subMenu= document.getElementById("subMenu");
+function toggleMenu() {
+  subMenu.classList.toggle("open-menu");
+}
+</script>
+{% endblock jsLinks %}

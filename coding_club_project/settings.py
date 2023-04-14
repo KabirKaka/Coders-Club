@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'gallery',
     'accounts',
     'blogs',
+    'contact',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
