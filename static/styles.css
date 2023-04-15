@@ -1860,7 +1860,7 @@ transform-origin: bottom left;
 
 #home-top {
 height: 100vh;
-background-image: url("../media/static-images/home/home1.jpg");
+background-image: url("../media/static-images/home1.jpg");
   background-repeat: no-repeat;
   /* animation: changeBg 5s es infinite alternate; */
   background-size: cover;
@@ -2191,7 +2191,7 @@ ul {
 
 .our-webcoderskull {
   /* background: url("http://www.webcoderskull.com/img/right-sider-banner.png") no-repeat center top / cover; */
-  background: url("../media/static-images/home/our-team-bg.webp");
+  background: url("../media/static-images/our-team-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2501,13 +2501,13 @@ ul {
 
 @keyframes changeBg {
   0% {
-    background-image: url("../media/static-images/home/home1.jpg");
+    background-image: url("../media/static-images/home1.jpg");
   }
   50% {
-    background-image: url("../media/static-images/home/home3.jpg");
+    background-image: url("../media/static-images/home3.jpg");
   }
   100% {
-    background-image: url("../media/static-images/home/home1.jpg");
+    background-image: url("../media/static-images/home1.jpg");
   }
 }
 
@@ -2977,7 +2977,7 @@ border-radius: 0px;
 
 #gallery {
   margin-top: -62px;
-  background-image: url(../media/static-images/home/gallery-bg.jpg);
+  background-image: url(../media/static-images/gallery-bg.jpg);
   height: 60vh;
   background-repeat: no-repeat;
   /* animation: changeBg 5s es infinite alternate; */
