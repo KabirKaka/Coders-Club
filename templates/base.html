@@ -1,253 +1,321 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="{% static 'style.css' %}" />
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="{% static 'styles.css' %}" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
+</script>
   {% block cssLinksAndTitle %}{% endblock %}
 </head>
-
-  {% if isGallery %}
-  <body id="gallerybody">
-    {% else %}
-  <body>
-  {% endif %}
-
   <header class="sticky-top">
-    {% if isLoggedIn %}
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand color-primary link-light fs-4" href="{% url 'home' %}"
-          >Coder's Club</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav m-auto mb-lg-0">
-           
-            <li class="nav-item">
-              <a class="nav-link link-light underline-animated" href="{% url 'gallery-home' %}">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-light underline-animated" href="{% url 'events-home' %}">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-light underline-animated" href="{% url 'blogs-home' %}">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-light underline-animated" href="{% url 'account-joincommunity' %}">Join</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-light underline-animated" href="{% url 'sponsors-home' %}">Sponsors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-light underline-animated" href="{% url 'contact-home' %}">Contact</a>
-            </li>
-          </ul>
-            
-            <img src="{{ MEDIA_URL }}static-images/home/profile.jpg" class="user-pic" onclick="toggleMenu()">
-            
-                    <div class="sub-menu-wrap" id="subMenu">
-                        <div class="sub-menu">
-                          <div class="user-info">
-                                <img src="{{ MEDIA_URL }}static-images/home/profile.jpg">
-                                <h5>kabir kaka</h5>
-                            </div>
-                            <hr>
-                            <a href="" class="sub-menu-link">
-                              <img src="{{ MEDIA_URL }}static-images/profile-menu/profile.png" alt="">
-                                <p>Profile</p>
-                                <span>></span>
-                              </a>
-                              <a href="" class="sub-menu-link">
-                                <img src="{{ MEDIA_URL }}static-images/profile-menu/logout.png" alt="">
-                                <p>Logout</p>
-                                <span>></span>
-                              </a>
-                        </div> 
-                    </div>
-
+   {% if isLoggedIn %}
+   <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+     <a class="navbar-brand color-primary link-light fs-4" href="{% url 'home' %}">
+      Coder's Club
+     </a>
+     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-lg-0">
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'gallery-home' %}">
+         Gallery
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'events-home' %}">
+         Events
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'blogs-home' %}">
+         Blogs
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'account-joincommunity' %}">
+         Join
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'sponsors-home' %}">
+         Sponsors
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'contact-home' %}">
+         Contact
+        </a>
+       </li>
+      </ul>
+      <img class="user-pic" onclick="toggleMenu()" src="{{ MEDIA_URL }}static-images/profile.jpg"/>
+      <div class="sub-menu-wrap" id="subMenu">
+       <div class="sub-menu">
+        <div class="user-info">
+         <img src="{{ MEDIA_URL }}static-images/profile.jpg"/>
+         <h5>
+          kabir kaka
+         </h5>
         </div>
+        <hr/>
+        <a class="sub-menu-link" href="">
+         <img alt="" src="{{ MEDIA_URL }}static-images/profile-menu/profile.png"/>
+         <p>
+          Profile
+         </p>
+         <span>
+          &gt;
+         </span>
+        </a>
+        <a class="sub-menu-link" href="">
+         <img alt="" src="{{ MEDIA_URL }}static-images/profile-menu/logout.png"/>
+         <p>
+          Logout
+         </p>
+         <span>
+          &gt;
+         </span>
+        </a>
+       </div>
       </div>
-    </nav>
-      {% else %}
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand color-primary link-light fs-4" href="{% url 'home' %}">Coder's Club</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav m-auto mb-lg-0">
-               
-                <li class="nav-item">
-                  <a class="nav-link link-light underline-animated" href="{% url 'gallery-home' %}">Gallery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link-light underline-animated" href="{% url 'events-home' %}">Events</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link-light underline-animated" href="{% url 'blogs-home' %}">Blogs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link-light underline-animated" href="{% url 'account-joincommunity' %}">Join</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link-light underline-animated" href="{% url 'sponsors-home' %}">Sponsors</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link-light underline-animated" href="{% url 'contact-home' %}">Contact</a>
-                </li>
-              </ul>
-              
-              <a href="{% url 'account-register' %}">
-                <button type="button" class="btn btn-outline-light mx-1" id="singup">Signup</button>
-              </a>
-              <a href="{% url 'account-login' %}">
-                <button type="button" class="btn btn-outline-light mx-1" id="login">Login</button>
-              </a>
-            </div>
-          </div>
-        </nav>
-      {% endif %}
-</header>
-    <main>
-      {% block mainContent %}{% endblock %}
-    </main>
-    <footer>
-      <!-- footer -->
-      <section class="footer-section">
-        <div class="container m-auto justify-content-center align-item-center">
-          <div class="row footer-section-row">
-            <div class="col-md-4">
-              <div class="address">
-                <div class="left-icon">
-                  <img src="{{ MEDIA_URL }}static-images/icons/address.png" />
-                </div>
-                <div class="right-text">
-                  <h3>Address</h3>
-                  <p>Shree Ramakrishna Ashrama</p>
-                  <p>Madanpur-Rampur, Kalahandi, Odisha -766102</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="address">
-                <div class="left-icon">
-                  <img src="{{ MEDIA_URL }}static-images/icons/email.png" />
-                </div>
-                <div class="right-text">
-                  <h3>Mail Id</h3>
-                  <p>srka_mrampur@yahoo.co.in</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="address">
-                <div class="left-icon">
-                  <img src="{{ MEDIA_URL }}static-images/icons/phone.png" />
-                </div>
-                <div class="right-text">
-                  <h3>Phone</h3>
-                  <p>+91 9437040140,</p>
-                  <p>+91 7873708010</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3">
-              <h3 class="footer-title">
-                <span class="footer-title-text">Quick Link</span
-                ><span
-                  class="footer-title-underline-animated text-decoration-none"
-                ></span>
-              </h3>
-              <ul class="quick-link-list">
-                <li><a href="{% url 'gallery-home' %}"> Gallery</a></li>
-                <li><a href="{% url 'events-home' %}"> Events</a></li>
-                <li><a href="{% url 'blogs-home' %}"> Blogs</a></li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h3 class="footer-title title-transparent">Quick Link</h3>
-              <ul class="quick-link-list">
-                <li><a href="{% url 'account-joincommunity' %}"> Join Club</a></li>
-                <li><a href="{% url 'sponsors-home' %}"> Sponsors</a></li>
-                <li><a href="{% url 'contact-home' %}"> Contact</a></li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h3 class="footer-title">
-                <span class="footer-title-text">Get Updates</span
-                ><span
-                  class="footer-title-underline-animated text-decoration-none"
-                ></span>
-              </h3>
-              <p class="newsletter">Signup to Our Newsletter.</p>
-              <form action="">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control form-control-new"
-                    id="usr"
-                    name="username"
-                    placeholder="Enter Your Mail Id"
-                  />
-                </div>
-                <button type="submit" class="btn btn-primary subscribe pt-2">
-                  Subscribe
-                </button>
-              </form>
-              <div id="social">
-              
-              <a href="https://www.facebook.com/btc.bring.the.change" target="_blank"><img  class="facebookBtn smGlobalBtn"src="" alt=""> </a>
-              <a href=""><img  class="linkedinBtn smGlobalBtn"src="" alt=""></a> 
-              <a href=""><img  class="twitterBtn smGlobalBtn"src="" alt=""> </a>
-              <a href=""><img  class="youtubeBtn smGlobalBtn"src="" alt=""> </a>
-              </div>
-            </div>
-          </div>
+     </div>
+    </div>
+   </nav>
+   {% else %}
+   <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+     <a class="navbar-brand color-primary link-light fs-4" href="{% url 'home' %}">
+      Coder's Club
+     </a>
+     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-lg-0">
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'gallery-home' %}">
+         Gallery
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'events-home' %}">
+         Events
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'blogs-home' %}">
+         Blogs
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'account-joincommunity' %}">
+         Join
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'sponsors-home' %}">
+         Sponsors
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link link-light underline-animated" href="{% url 'contact-home' %}">
+         Contact
+        </a>
+       </li>
+      </ul>
+      <a href="{% url 'account-register' %}">
+       <button class="btn btn-outline-light mx-1" id="singup" type="button">
+        Signup
+       </button>
+      </a>
+      <a href="{% url 'account-login' %}">
+       <button class="btn btn-outline-light mx-1" id="login" type="button">
+        Login
+       </button>
+      </a>
+     </div>
+    </div>
+   </nav>
+   {% endif %}
+  </header>
+  <main>
+   {% block mainContent %}{% endblock %}
+  </main>
+  <footer>
+   <section class="footer-section">
+    <div class="container m-auto justify-content-center align-item-center">
+     <div class="row footer-section-row">
+      <div class="col-md-4">
+       <div class="address">
+        <div class="left-icon">
+         <img src="{{ MEDIA_URL }}static-images/icons/address.png"/>
         </div>
-      </section>
-    
-      <section class="footer-section-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 footer-bottom-left">
-              <p>© All Rights Reserved Coder's Club</p>
-            </div>
-            <div class="col-md-6 footer-bottom-right">
-              <p>Developed by <a href="https://www.facebook.com/btc.bring.the.change" target="_blank">Team BTC</a></p>
-            </div>
-          </div>
+        <div class="right-text">
+         <h3>
+          Address
+         </h3>
+         <p>
+          Shree Ramakrishna Ashrama
+         </p>
+         <p>
+          Madanpur-Rampur, Kalahandi, Odisha -766102
+         </p>
         </div>
-      </section>
-    </footer>
-    <script src="{% static 'script.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-    {% block jsLinks %}{% endblock %}
-  </body>
-
+       </div>
+      </div>
+      <div class="col-md-4">
+       <div class="address">
+        <div class="left-icon">
+         <img src="{{ MEDIA_URL }}static-images/icons/email.png"/>
+        </div>
+        <div class="right-text">
+         <h3>
+          Mail Id
+         </h3>
+         <p>
+          srka_mrampur@yahoo.co.in
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-3">
+       <div class="address">
+        <div class="left-icon">
+         <img src="{{ MEDIA_URL }}static-images/icons/phone.png"/>
+        </div>
+        <div class="right-text">
+         <h3>
+          Phone
+         </h3>
+         <p>
+          +91 9437040140,
+         </p>
+         <p>
+          +91 7873708010
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-3">
+       <h3 class="footer-title">
+        <span class="footer-title-text">
+         Quick Link
+        </span>
+        <span class="footer-title-underline-animated text-decoration-none">
+        </span>
+       </h3>
+       <ul class="quick-link-list">
+        <li>
+         <a href="{% url 'gallery-home' %}">
+          Gallery
+         </a>
+        </li>
+        <li>
+         <a href="{% url 'events-home' %}">
+          Events
+         </a>
+        </li>
+        <li>
+         <a href="{% url 'blogs-home' %}">
+          Blogs
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="col-md-4">
+       <h3 class="footer-title title-transparent">
+        Quick Link
+       </h3>
+       <ul class="quick-link-list">
+        <li>
+         <a href="{% url 'account-joincommunity' %}">
+          Join Club
+         </a>
+        </li>
+        <li>
+         <a href="{% url 'sponsors-home' %}">
+          Sponsors
+         </a>
+        </li>
+        <li>
+         <a href="{% url 'contact-home' %}">
+          Contact
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="col-md-4">
+       <h3 class="footer-title">
+        <span class="footer-title-text">
+         Get Updates
+        </span>
+        <span class="footer-title-underline-animated text-decoration-none">
+        </span>
+       </h3>
+       <p class="newsletter">
+        Signup to Our Newsletter.
+       </p>
+       <form action="">
+        <div class="form-group">
+         <input class="form-control form-control-new" id="usr" name="username" placeholder="Enter Your Mail Id" type="text"/>
+        </div>
+        <button class="btn btn-primary subscribe pt-2" type="submit">
+         Subscribe
+        </button>
+       </form>
+       <div id="social">
+        <a href="https://www.facebook.com/btc.bring.the.change" target="_blank">
+         <img alt="" class="facebookBtn smGlobalBtn" src=""/>
+        </a>
+        <a href="">
+         <img alt="" class="linkedinBtn smGlobalBtn" src=""/>
+        </a>
+        <a href="">
+         <img alt="" class="twitterBtn smGlobalBtn" src=""/>
+        </a>
+        <a href="">
+         <img alt="" class="youtubeBtn smGlobalBtn" src=""/>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="footer-section-bottom">
+    <div class="container">
+     <div class="row">
+      <div class="col-md-6 footer-bottom-left">
+       <p>
+        © All Rights Reserved Coder's Club
+       </p>
+      </div>
+      <div class="col-md-6 footer-bottom-right">
+       <p>
+        Developed by
+        <a href="https://www.facebook.com/btc.bring.the.change" target="_blank">
+         Team BTC
+        </a>
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+  </footer>
+  <script src="{% static 'script.js' %}">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js">
+  </script>
+  {% block jsLinks %}{% endblock %}
+</body>
 </html>

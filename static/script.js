@@ -4,116 +4,9 @@ function toggleMenu() {
 	subMenu.classList.toggle("open-menu");
 }
 
-
-
-// gallery
-
-
-
-// If you want to add a smooth scrolling effect to the text popup
-// $('a[href^="#"]').on('click', function(event) {
-//     var target = $(this.getAttribute('href'));
-//     if( target.length ) {
-//       event.preventDefault();
-//       $('html, body').animate({
-//         scrollTop: target.offset().top
-//       }, 1000);
-//     }
-//   });
-
-// slider 2
-// $('#recipeCarousel').carousel({
-//     interval: 10000
-//   })
-
-//   $('.carousel .carousel-item').each(function(){
-//       var minPerSlide = 3;
-//       var next = $(this).next();
-//       if (!next.length) {
-//       next = $(this).siblings(':first');
-//       }
-//       next.children(':first-child').clone().appendTo($(this));
-
-//       for (var i=0;i<minPerSlide;i++) {
-//           next=next.next();
-//           if (!next.length) {
-//               next = $(this).siblings(':first');
-//             }
-
-//           next.children(':first-child').clone().appendTo($(this));
-//         }
-//   });
-
-// Get all the carousel items
-// Get all the carousel items
-// var carouselItems = document.querySelectorAll('.carousel .carousel-item');
-
-// // Loop through each carousel item
-// carouselItems.forEach(function(item) {
-//   var next = item.nextElementSibling;
-//   if (!next) {
-//     next = item.parentNode.firstElementChild;
-//   }
-//   var clone = next.firstElementChild.cloneNode(true);
-//   item.appendChild(clone);
-//   for (var i = 0; i < 6; i++) {
-//     next = next.nextElementSibling;
-//     if (!next) {
-//       next = this.parentNode.firstElementChild;
-//     }
-//     next.children[0].classList.add('cloneditem-' + (i+1));
-//     this.appendChild(next.children[0].cloneNode(true));
-//   }
-// })
-
-//   slider
-
-// const slider = document.querySelector('.slider');
-// const sliderWrapper = document.querySelector('.slider-wrapper');
-// const prevButton = document.querySelector('.prev');
-// const nextButton = document.querySelector('.next');
-
-// let currentIndex = 0;
-
-// function slideToIndex(index) {
-//   const cardWidth = slider.querySelector('.slider-card').offsetWidth;
-//   const offset = -1 * index * (cardWidth + 20);
-//   slider.style.transform = `translateX(${offset}px)`;
-//   currentIndex = index;
-// }
-
-// function slideLeft() {
-//   if (currentIndex > 0) {
-//     slideToIndex(currentIndex - 1);
-//   } else {
-//     slideToIndex(slider.children.length - 3);
-//   }
-// }
-
-// function slideRight() {
-//   if (currentIndex < slider.children.length - 3) {
-//     slideToIndex(currentIndex + 1);
-//   } else {
-//     slideToIndex(0);
-//   }
-// }
-
-// prevButton.addEventListener('click', slideLeft);
-// nextButton.addEventListener('click', slideRight);
-
-// let autoSlideInterval = setInterval(slideRight, 1000);
-
-// sliderWrapper.addEventListener('mouseenter', () => {
-//   clearInterval(autoSlideInterval);
-// });
-
-// sliderWrapper.addEventListener('mouseleave', () => {
-//   autoSlideInterval = setInterval(slideRight, 5000);
-// });
-
 // image slider
 
-var swiper = new Swiper(".slide-content", {
+var swiper = new swiper(".slide-content", {
 	slidesPerView: 3,
 	spaceBetween: 25,
 	loop: true,
@@ -143,22 +36,92 @@ var swiper = new Swiper(".slide-content", {
 	},
 });
 
+/*Interactivity to determine when an animated element in in view. In view elements trigger our animation*/
 
+$(document).ready(function() {
 
+    //window and animation items
+    var animation_elements = $.find('.animation-element');
+    var web_window = $(window);
+  
+    //check to see if any animation containers are currently in view
+    function check_if_in_view() {
+      //get current window information
+      var window_height = web_window.height();
+      var window_top_position = web_window.scrollTop();
+      var window_bottom_position = (window_top_position + window_height);
+  
+      //iterate through elements to see if its in view
+      $.each(animation_elements, function() {
+  
+        //get the element sinformation
+        var element = $(this);
+        var element_height = $(element).outerHeight();
+        var element_top_position = $(element).offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+  
+        //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+        if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+          element.addClass('in-view');
+        } else {
+          element.removeClass('in-view');
+        }
+      });
+  
+    }
+  
+    //on or scroll, detect elements in view
+    $(window).on('scroll resize', function() {
+        check_if_in_view()
+      })
+      //trigger our scroll event on initial load
+    $(window).trigger('scroll');
+  
+  });
 
-// home
+function show1(){
+  document.getElementById('div1').style.display ='none';
+}
 
-// const changeBg = () =>{
-//     const images =[
-//         "url('../images/home1.jpg')",
-//         "url('../images/home3.jpg')",
-//     ]
+function show2(){
+  document.getElementById('div1').style.display = 'block';
+}
 
+$(document).ready(function() {
+  $('#multiselect').multiselect({
+    buttonWidth : '160px',
+    includeSelectAllOption : true,
+		nonSelectedText: 'Select an Option'
+  });
+});
 
-// }
+function getSelectedValues() {
+  var selectedVal = $("#multiselect").val();
+	for(var i=0; i<selectedVal.length; i++){
+		function innerFunc(i) {
+			setTimeout(function() {
+				location.href = selectedVal[i];
+			}, i*2000);
+		}
+		innerFunc(i);
+	}
+}
 
-// $('#myCarousel').carousel({
-//     interval: 3000,
-//  })
-
-// changeBg()
+function togglePasswordVisibilityReg() {
+  var passwordField = document.getElementById("passwordReg");
+  var showPasswordCheckbox = document.getElementById("showPasswordReg");
+  if (showPasswordCheckbox.checked) {
+    passwordField.type = "text";
+  } else {
+    passwordField.type = "password";
+  }
+}
+function togglePasswordVisibilityLog() {
+  var passwordField = document.getElementById("passwordLog");
+  var showPasswordCheckbox = document.getElementById("showPasswordLog");
+  if (showPasswordCheckbox.checked) {
+    passwordField.type = "text";
+  } else {
+    passwordField.type = "password";
+  }
+}

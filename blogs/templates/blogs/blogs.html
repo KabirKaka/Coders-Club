@@ -1,183 +1,166 @@
 {% extends "base.html" %}
 {% block cssLinksAndTitle %}
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"/>
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-  <title>Blogs - Coder's Club</title>
-{% endblock cssLinksAndTitle %}
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js">
+</script>
+<title>
+ Blogs - Coder's Club
+</title>
+<body>
+ {% endblock cssLinksAndTitle %}
 {% block mainContent %}
-      <!-- BreadCrumb Section -->
-      <div class="BreadCrumb">
-        <img aria-label="breadcrumb" />
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="FrontPage.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Blogs</li>
-        </ol>
-      </div>
-      <div class="blog-title ">
-        <span class="headingBlog">Informative & Challenging Tips</span>
-
-      </div>
-  </div>
-
-  <!-- <ul class="slideshow">
-	<img src="/assets/images/gif/videoplayback.gif" alt="">
-</ul> -->
-  <div class="Blog_Section">
-    <div id="contact" class="blog-area section-padding">
-      <!-- <div class="container">										 -->
-      <div class="blog_cards">
-        <div class="card-hover">
-          <div class="card-hover__content">
-            <h3 class="card-hover__title">
-              Make Your <span><b> Coding</b></span> Efficient!
-            </h3>
-            <p class="card-hover__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam
-              doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?</p>
-            <a href="PageBlog.html" class="card-hover__link">
-              <span>Visit Wesbite</span>
-              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
-          </div>
-          <div class="card-hover__extra">
-            <h4><span>Tip:</span> Practice Coding 5 <span>times</span> a Day</h4>
-          </div>
-          <img src="/assets/images/Blog/b1.jpg" alt="">
-        </div>
-        <div class="card-hover">
-          <div class="card-hover__content">
-            <h3 class="card-hover__title">
-              Make your <span>choice</span> right now!
-            </h3>
-            <p class="card-hover__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam
-              doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?</p>
-            <a href="PageBlog.html" class="card-hover__link">
-              <span>Visit Website</span>
-              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
-          </div>
-          <div class="card-hover__extra">
-            <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4>
-          </div>
-          <img src="/assets/images/Blog/b2.jpg" alt="">
-        </div>
-        <div class="card-hover">
-          <div class="card-hover__content">
-            <h3 class="card-hover__title">
-              Make your <span>choice</span> right now!
-            </h3>
-            <p class="card-hover__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam
-              doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?</p>
-            <a href="PageBlog.html" class="card-hover__link">
-              <span>Visit Website</span>
-              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
-          </div>
-          <div class="card-hover__extra">
-            <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4>
-          </div>
-          <img src="/assets/images/Blog/b3.jpg" alt="">
-        </div>
-      </div>
-
-      <!--                           
-                                <div class="container ">
-                                    <div class="text-center">
-                                      <h1>Bootstrap card tiled layout</h1>
-                                    </div>
-                                    <div class="container">
-                                      <div class="card-row cardsForBlog">
-                                        <div class="card">
-                                          <a href="#">
-                                          <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
-                                          <div class="card-body">
-                                            <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                            <p class="card-text">
-                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad alias, aliquid amet aspernatur atque culpa cum debitis dicta doloremque, dolorum ea eos et excepturi explicabo facilis harum illo impedit incidunt laborum laudantium...
-                                            </p>
-                                            <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
-                                        </div>
-                                          </a>
-                                        </div>
-                                        <div class="card">
-                                          <a href="#">
-                                          <img class="card-img-top" src="https://images.unsplash.com/photo-1472076638602-b1f8b1ac0b4a?ixlib=rb-0.3.5&s=63c9de7246b535be56c8eaff9b87dd89&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
-                                          <div class="card-body">
-                                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, doloremque!</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio iusto maxime nemo omnis praesentium similique.</p>
-                                            <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
-                                          </div>
-                                          </a>
-                                        </div>
-                                        <div class="card">
-                                          <a href="#">
-                                          <img class="card-img-top" src="https://images.unsplash.com/photo-1535086181678-5a5c4d23aa7d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=34c86263bec2c8f74ceb74e9f4c5a5fc&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
-                                          <div class="card-body">
-                                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur.</h5>
-                                            <p class="card-text">Amet commodi deleniti enim laboriosam odio placeat praesentium quis ratione rerum suscipit.</p>
-                                            <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
-                                          </div>
-                                          </a>
-                                        </div>
-                                        <div class="card">
-                                          <a href="#">
-                                          <img class="card-img-top" src="https://images.unsplash.com/photo-1535074153497-b08c5aa9c236?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d2aaf944a59f16fe1fe72f5057b3a7dd&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
-                                          <div class="card-body">
-                                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur.</h5>
-                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                            <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
-                                          </div>
-                                          </a>
-                                        </div>
-                                        <div class="card">
-                                          <a href="#">
-                                          <img class="card-img-top" src="https://images.unsplash.com/photo-1535124406821-d2848dfbb25c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98c434d75b44c9c23fc9df2a9a77d59f&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
-                                          <div class="card-body">
-                                            <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, consequatur culpa cumque deserunt dignissimos error explicabo fugiat harum ipsam magni minus mollitia nemo perferendis qui repellendus rerum saepe vel voluptate voluptatem voluptatum!
-                                              Aperiam, labore, molestiae!..</p>
-                                            <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
-                                          </div>
-                                          </a>
-                                        </div>
-                                        <div class="card">
-                                          <a href="#">
-                                          <img class="card-img-top" src="https://images.unsplash.com/photo-1508015926936-4eddcc6d4866?ixlib=rb-0.3.5&s=10b3a8717ab609be8d7786cab50c4e0b&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
-                                          <div class="card-body">
-                                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!</p>
-                                            <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
-                                          </div>
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div> -->
+ <div class="BreadCrumb">
+  <img aria-label="breadcrumb"/>
+  <ol class="breadcrumb">
+   <li class="breadcrumb-item">
+    <a href="FrontPage.html">
+     Home
+    </a>
+   </li>
+   <li aria-current="page" class="breadcrumb-item active">
+    Blogs
+   </li>
+  </ol>
+ </div>
+ <div class="blog-title">
+  <span class="headingBlog">
+   Informative &amp; Challenging Tips
+  </span>
+ </div>
+ <div class="Blog_Section">
+  <div class="blog-area section-padding" id="contact">
+   <div class="blog_cards">
+    <div class="card-hover">
+     <div class="card-hover__content">
+      <h3 class="card-hover__title">
+       Make Your
+       <span>
+        <b>
+         Coding
+        </b>
+       </span>
+       Efficient!
+      </h3>
+      <p class="card-hover__text">
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam
+              doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?
+      </p>
+      <a class="card-hover__link" href="PageBlog.html">
+       <span>
+        Visit Wesbite
+       </span>
+       <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+        <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="card-hover__extra">
+      <h4>
+       <span>
+        Tip:
+       </span>
+       Practice Coding 5
+       <span>
+        times
+       </span>
+       a Day
+      </h4>
+     </div>
+     <img alt="" src="{{ MEDIA_URL }}static-images/Blog/b1.jpg"/>
     </div>
-
-
-    <!-- </div> -->
+    <div class="card-hover">
+     <div class="card-hover__content">
+      <h3 class="card-hover__title">
+       Make your
+       <span>
+        choice
+       </span>
+       right now!
+      </h3>
+      <p class="card-hover__text">
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam
+              doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?
+      </p>
+      <a class="card-hover__link" href="PageBlog.html">
+       <span>
+        Visit Website
+       </span>
+       <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+        <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="card-hover__extra">
+      <h4>
+       Learn
+       <span>
+        now
+       </span>
+       and get
+       <span>
+        40%
+       </span>
+       discount!
+      </h4>
+     </div>
+     <img alt="" src="{{ MEDIA_URL }}static-images/Blog/b2.jpg"/>
+    </div>
+    <div class="card-hover">
+     <div class="card-hover__content">
+      <h3 class="card-hover__title">
+       Make your
+       <span>
+        choice
+       </span>
+       right now!
+      </h3>
+      <p class="card-hover__text">
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam
+              doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?
+      </p>
+      <a class="card-hover__link" href="PageBlog.html">
+       <span>
+        Visit Website
+       </span>
+       <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+        <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="card-hover__extra">
+      <h4>
+       Learn
+       <span>
+        now
+       </span>
+       and get
+       <span>
+        40%
+       </span>
+       discount!
+      </h4>
+     </div>
+     <img alt="" src="{{ MEDIA_URL }}static-images/Blog/b3.jpg"/>
+    </div>
+   </div>
   </div>
-  </div>
-{% endblock mainContent %}
+ </div>
+ {% endblock mainContent %}
 {% block jsLinks %}
-<script>
+ <script>
   let subMenu;
   subMenu = document.getElementById("subMenu");
   function toggleMenu() {
     subMenu.classList.toggle("open-menu");
   }
-</script>
-{% endblock jsLinks %}
+ </script>
+ {% endblock jsLinks %}

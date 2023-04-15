@@ -1,1075 +1,1683 @@
 {% extends "base.html" %}
-<!-- {% load static %} -->
 {% block cssLinksAndTitle %}
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Leaderboard - Coder's Club</title>
-{% endblock cssLinksAndTitle %}
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<title>
+ Leaderboard - Coder's Club
+</title>
+<body>
+ {% endblock cssLinksAndTitle %}
 {% block mainContent %}
-    <div class="leaderboard-body-container">
-      <!-- webKode leaderboard -->
-      <div class="leaderboard">
-        <h1 class="text-center mt-4 mb-2">WebKode Competition Leaderboard </h1>
-        <div class="row width-80" id="row1">
-          <div class="achiever d-flex justify-content-around topper">
-            <div class="position d-flex">
-              <div class="m-auto">
-                <img src="./images/icons/trophy128.png" alt="" class="align-item-center">
-              </div>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption ">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/men/1.jpg" /> -->
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box1 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row width-80" id="row2">
-          <div class="achiever d-flex justify-content-around">
-            <div class="position d-flex">
-              <h1 class="m-auto">2</h1>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/women/2.jpg" /> -->
-
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box2 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Profile Picture"
-                    class="circular-image" />
-
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row width-80" id="row3">
-          <div class="achiever d-flex justify-content-around">
-            <div class="position d-flex">
-              <h1 class="m-auto">3</h1>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/men/3.jpg" /> -->
-
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box3 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row width-80" id="row4">
-          <div class="achiever d-flex justify-content-around">
-            <div class="position d-flex">
-              <h1 class="m-auto">4</h1>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/women/4.jpg" /> -->
-
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box4 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row width-80" id="row5">
-          <div class="achiever d-flex justify-content-around">
-            <div class="position d-flex">
-              <h1 class="m-auto">5</h1>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/men/5.jpg" /> -->
-
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box5 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/16.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+ <div class="leaderboard-body-container">
+  <div class="leaderboard">
+   <h1 class="text-center mt-4 mb-2">
+    WebKode Competition Leaderboard
+   </h1>
+   <div class="row width-80" id="row1">
+    <div class="achiever d-flex justify-content-around topper">
+     <div class="position d-flex">
+      <div class="m-auto">
+       <img alt="" class="align-item-center" src="./images/icons/trophy128.png"/>
       </div>
-      <hr class="border border-yellow border-3 opacity-75 width-80 m-auto mt-5 mb-2">
-      <!-- leaderboard -->
-      <div class="leaderboard">
-        <h1 class="text-center mt-4 mb-2">FlutterKode Competition Leaderboard </h1>
-        <div class="row width-80" id="row1">
-          <div class="achiever d-flex justify-content-around topper">
-
-            <div class="position d-flex">
-              <div class="m-auto">
-                <img src="./images/icons/trophy128.png" alt="" class="align-item-center">
-              </div>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption ">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/men/1.jpg" /> -->
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box1 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row width-80" id="row2">
-          <div class="achiever d-flex justify-content-around">
-            <div class="position d-flex">
-              <h1 class="m-auto">2</h1>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/women/2.jpg" /> -->
-
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box2 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Profile Picture"
-                    class="circular-image" />
-
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row width-80" id="row3">
-          <div class="achiever d-flex justify-content-around">
-            <div class="position d-flex">
-              <h1 class="m-auto">3</h1>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/men/3.jpg" /> -->
-
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box3 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row width-80" id="row4">
-          <div class="achiever d-flex justify-content-around">
-            <div class="position d-flex">
-              <h1 class="m-auto">4</h1>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/women/4.jpg" /> -->
-
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box4 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row width-80" id="row5">
-          <div class="achiever d-flex justify-content-around">
-            <div class="position d-flex">
-              <h1 class="m-auto">5</h1>
-              <div class="vl"></div>
-            </div>
-            <div class="team-desciption">
-              <div class="achiever-name text-start">BTC</div>
-              <p class="d-flex flex-wrap">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                maiores.
-              </p>
-            </div>
-            <div class="achiever-pic">
-              <!-- <img src="https://randomuser.me/api/portraits/men/5.jpg" /> -->
-
-              <img src="./images/about-img-1.jpg" />
-            </div>
-          </div>
-          <div class="team-box team-box5 p-3">
-            <h2 class="text-center">Team Members</h2>
-            <div class="container-team">
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">John Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Jane Doe</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/16.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Bob Smith</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-              <div class="leaderboard-card">
-                <div class="circular-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Profile Picture"
-                    class="circular-image" />
-                  <div class="name">Sarah Johnson</div>
-                  <div class="role">Front-end Developer</div>
-                  <ul class="follow-us clearfix">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                  <a href="#" class="button">Portfolio</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="vl">
       </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
     </div>
+    <div class="team-box team-box1 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/20.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/1.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/2.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/3.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
     </div>
-    {% endblock mainContent %}
+   </div>
+   <div class="row width-80" id="row2">
+    <div class="achiever d-flex justify-content-around">
+     <div class="position d-flex">
+      <h1 class="m-auto">
+       2
+      </h1>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box2 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/4.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/5.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/6.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/7.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row width-80" id="row3">
+    <div class="achiever d-flex justify-content-around">
+     <div class="position d-flex">
+      <h1 class="m-auto">
+       3
+      </h1>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box3 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/8.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/9.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/10.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/11.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row width-80" id="row4">
+    <div class="achiever d-flex justify-content-around">
+     <div class="position d-flex">
+      <h1 class="m-auto">
+       4
+      </h1>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box4 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/12.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/13.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/19.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/13.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row width-80" id="row5">
+    <div class="achiever d-flex justify-content-around">
+     <div class="position d-flex">
+      <h1 class="m-auto">
+       5
+      </h1>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box5 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/14.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/15.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/16.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/17.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <hr class="border border-yellow border-3 opacity-75 width-80 m-auto mt-5 mb-2"/>
+  <div class="leaderboard">
+   <h1 class="text-center mt-4 mb-2">
+    FlutterKode Competition Leaderboard
+   </h1>
+   <div class="row width-80" id="row1">
+    <div class="achiever d-flex justify-content-around topper">
+     <div class="position d-flex">
+      <div class="m-auto">
+       <img alt="" class="align-item-center" src="./images/icons/trophy128.png"/>
+      </div>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box1 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/20.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/1.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/2.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/3.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row width-80" id="row2">
+    <div class="achiever d-flex justify-content-around">
+     <div class="position d-flex">
+      <h1 class="m-auto">
+       2
+      </h1>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box2 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/4.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/5.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/6.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/7.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row width-80" id="row3">
+    <div class="achiever d-flex justify-content-around">
+     <div class="position d-flex">
+      <h1 class="m-auto">
+       3
+      </h1>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box3 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/8.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/9.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/10.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/11.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row width-80" id="row4">
+    <div class="achiever d-flex justify-content-around">
+     <div class="position d-flex">
+      <h1 class="m-auto">
+       4
+      </h1>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box4 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/12.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/13.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/19.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/13.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row width-80" id="row5">
+    <div class="achiever d-flex justify-content-around">
+     <div class="position d-flex">
+      <h1 class="m-auto">
+       5
+      </h1>
+      <div class="vl">
+      </div>
+     </div>
+     <div class="team-desciption">
+      <div class="achiever-name text-start">
+       BTC
+      </div>
+      <p class="d-flex flex-wrap">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                maiores.
+      </p>
+     </div>
+     <div class="achiever-pic">
+      <img src="./images/about-img-1.jpg"/>
+     </div>
+    </div>
+    <div class="team-box team-box5 p-3">
+     <h2 class="text-center">
+      Team Members
+     </h2>
+     <div class="container-team">
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/14.jpg"/>
+        <div class="name">
+         John Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/15.jpg"/>
+        <div class="name">
+         Jane Doe
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/16.jpg"/>
+        <div class="name">
+         Bob Smith
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+      <div class="leaderboard-card">
+       <div class="circular-image-container">
+        <img alt="Profile Picture" class="circular-image" src="https://randomuser.me/api/portraits/men/17.jpg"/>
+        <div class="name">
+         Sarah Johnson
+        </div>
+        <div class="role">
+         Front-end Developer
+        </div>
+        <ul class="follow-us clearfix">
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <i aria-hidden="true" class="fa fa-linkedin">
+           </i>
+          </a>
+         </li>
+        </ul>
+        <a class="button" href="#">
+         Portfolio
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ {% endblock mainContent %}
