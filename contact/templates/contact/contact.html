@@ -10,23 +10,11 @@
 <title>
  Contact - Coder's Club
 </title>
-<body>
- {% endblock cssLinksAndTitle %}
+<body style="background-image:linear-gradient(to bottom right, rgb(2 5 46), rgb(179 203 255))">
+{% endblock cssLinksAndTitle %}
 {% block mainContent %}
- <div class="BreadCrumb">
-  <img aria-label="breadcrumb"/>
-  <ol class="breadcrumb">
-   <li class="breadcrumb-item">
-    <a href="FrontPage.html">
-     Home
-    </a>
-   </li>
-   <li aria-current="page" class="breadcrumb-item active">
-    Contact Us
-   </li>
-  </ol>
- </div>
- <div class="Contact_Section">
+
+ <div class="Contact_Section mt-4">
   <div class="contact-area section-padding" id="contact">
    <div class="container">
     <div class="section-title text-center">
@@ -40,7 +28,8 @@
     <div class="row">
      <div class="col-lg-7">
       <div class="contact">
-       <form action="contact.php" class="form formContact" method="post" name="enq" onsubmit="return ajaxpost()">
+       <form action="{% url 'contact-home' %}" class="form formContact" method="post" name="enq" onsubmit="return ajaxpost()">
+        {% csrf_token %}
         <div class="row formback">
          <div class="form-group col-md-6 my-3">
           <input class="form-control" name="name" placeholder="Name" required="required" type="text"/>
@@ -55,8 +44,8 @@
           <textarea class="form-control" name="message" placeholder="Your Message" required="required" rows="6"></textarea>
          </div>
         </div>
-        <div class="col-md-12 text-center" style="position: relative;left: 200px;">
-         <button class="btn btn-contact-bg fw-bolder" id="submitButton" name="submit" title="Submit Your Message!" type="submit" value="Send message">
+        <div class="col-md-12 text-center">
+         <button class="btn btn-light" id="submitButton" name="submit" title="Submit Your Message!" type="submit" value="Send message">
           Send Message
          </button>
         </div>
@@ -112,12 +101,3 @@
   </div>
  </div>
  {% endblock mainContent %}
-{% block jsLinks %}
- <script>
-  let subMenu;
-     subMenu= document.getElementById("subMenu");
-function toggleMenu() {
-  subMenu.classList.toggle("open-menu");
-}
- </script>
- {% endblock jsLinks %}
