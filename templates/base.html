@@ -5,19 +5,19 @@
   <meta charset="utf-8"/>
   <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- <script src="{% static 'script.js' %}"></script> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="{% static 'styles.css' %}" rel="stylesheet"/>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
 </script>
 
-<script src="{% static 'script.js' %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
   {% block cssLinksAndTitle %}{% endblock %}
 </head>
 {% block body %}{% endblock body %}
   <header class="sticky-top">
-   {% if isLoggedIn %}
+   {% if user.is_authenticated %}
    <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
      <a class="navbar-brand color-primary link-light fs-4" href="{% url 'home' %}">
@@ -60,18 +60,22 @@
         </a>
        </li>
       </ul>
-      <img class="user-pic" onclick="toggleMenu()" src="{{ MEDIA_URL }}static-images/profile.jpg"/>
+      {% if request.user.profile.profile_picture %}
+      <img class="user-pic" onclick="toggleMenu()" src="{{ request.user.profile.profile_picture.url }}"/>
+      {% else %}
+      <img class="user-pic" onclick="toggleMenu()" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"/>
+      {% endif %}
+
       <div class="sub-menu-wrap" id="subMenu">
        <div class="sub-menu">
-        <div class="user-info">
-         <img src="{{ MEDIA_URL }}static-images/profile.jpg"/>
-         <h5>
-          kabir kaka
-         </h5>
+        <div class="user-info">         
+         <h6>
+          {{ request.user.profile.name }}
+         </h6>
         </div>
         <hr/>
-        <a class="sub-menu-link" href="">
-         <img alt="" src="{{ MEDIA_URL }}static-images/profile-menu/profile.png"/>
+        <a class="sub-menu-link" href="{% url 'account-profile' %}">
+         <!-- <img alt="" src="{{ MEDIA_URL }}static-images/profile-menu/profile.png"/> -->
          <p>
           Profile
          </p>
@@ -79,8 +83,8 @@
           &gt;
          </span>
         </a>
-        <a class="sub-menu-link" href="">
-         <img alt="" src="{{ MEDIA_URL }}static-images/profile-menu/logout.png"/>
+        <a class="sub-menu-link" href="{% url 'account-logout' %}">
+         <!-- <img alt="" src="{{ MEDIA_URL }}static-images/profile-menu/logout.png"/> -->
          <p>
           Logout
          </p>
@@ -319,4 +323,6 @@
 
   {% block jsLinks %}{% endblock %}
 </body>
+<script src="{% static 'script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

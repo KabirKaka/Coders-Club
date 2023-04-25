@@ -3,12 +3,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet"/>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com" rel="preconnect"/>
- <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
- <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&amp;display=swap" rel="stylesheet"/>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
  </script>
  <script crossorigin="anonymous" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js">
@@ -18,63 +12,50 @@
  </title>
  <body>
   {% endblock cssLinksAndTitle %}
+  
+ {% block body %}
+ <body class="loginBody" >
+  {% endblock body %}
 {% block mainContent %}
-  <div class="BreadCrumb">
-   <img aria-label="breadcrumb"/>
-   <ol class="breadcrumb">
-    <li class="breadcrumb-item">
-     <a href="FrontPage.html">
-      Home
-     </a>
-    </li>
-    <li aria-current="page" class="breadcrumb-item active">
-     Login
-    </li>
-   </ol>
-  </div>
   <section class="login">
    <div class="login_box">
     <div class="left">
      <div class="top_link">
-      <a href="Frontpage.html">
-       <img alt="" src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&amp;export=download"/>
-       Return home
+      <a href="{% url 'home' %}">
+       <img src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download" alt=""/>
+       Return Home
       </a>
      </div>
      <div class="contact">
-      <form action="">
-       <img alt="" class="imgLogin" height="120" src="{{ MEDIA_URL }}static-images/Login/l3.png" width="100"/>
-       <input id="emailLog" placeholder="EMAIL" required="" type="email"/>
-       <input id="passwordLog" placeholder="PASSWORD" required="" type="text"/>
+      <form method="post" action="{% url 'account-login' %}" onsubmit="return ajaxpost()">
+        {% csrf_token %}
+       <img class="imgLogin" src="{{ MEDIA_URL }}static-images/Login/l3.png" height="120" width="100" alt=""/>
+       <input type="text" id="emailLog" class="form-control formFiSize form-control-lg" name="username" placeholder="Username" required/>
+       <input type="password" id="passwordLog" class="form-control formFiSize form-control-lg" name="password" placeholder="Password" required/>
        <div class="showHide">
-        Show Password
-        <input checked="" id="showPasswordLog" onclick="togglePasswordVisibilityLog()" style="
-                      height: 100% !important;
-                      position: relative;
-                      top: -33px;
-                      left: -13px;
-                    " type="checkbox"/>
-       </div>
+        <p style="margin-left:33px;">Show Password</p>
+        <input style="
+            height: 100% !important;
+            position: relative;
+            top: -49px;
+            left: -114px;
+          " type="checkbox" id="showPasswordLog" onclick="togglePasswordVisibilityLog()" />
+              <p>
+               <a href="ForgotPassword.html" class="link-info forgetPass">Forget Password?</a> 
+              </p>
+
        <p>
         Don't have an account?
-        <a class="link-info" href="Registration_Form.html">
-         Register here
-        </a>
+                <a href="{% url 'account-register' %}" class="link-info regAcct">Register here</a>
        </p>
-       <a class="submitLog btn" href="#">
-        LET'S GO
-       </a>
+              <button type="submit" class="mx-4 RegBtn btn">Sign In</button>
       </form>
      </div>
     </div>
     <div class="right">
      <div class="right-text">
-      <h2>
-       KODER'S CLUB
-      </h2>
-      <h5>
-       NED UNIVERSITY OF ENGINEERING AND TECHNOLOGY
-      </h5>
+            <h2>Coder's Club</h2>
+            <h5>Let's spread the love for coding!</h5>
      </div>
      <div class="right-inductor">
       <img alt="" src="https://lh3.googleusercontent.com/fife/ABSRlIoGiXn2r0SBm7bjFHea6iCUOyY0N2SrvhNUT-orJfyGNRSMO2vfqar3R-xs5Z4xbeqYwrEMq2FXKGXm-l_H6QAlwCBk9uceKBfG-FjacfftM0WM_aoUC_oxRSXXYspQE3tCMHGvMBlb2K1NAdU6qWv3VAQAPdCo8VwTgdnyWv08CmeZ8hX_6Ty8FzetXYKnfXb0CTEFQOVF4p3R58LksVUd73FU6564OsrJt918LPEwqIPAPQ4dMgiH73sgLXnDndUDCdLSDHMSirr4uUaqbiWQq-X1SNdkh-3jzjhW4keeNt1TgQHSrzW3maYO3ryueQzYoMEhts8MP8HH5gs2NkCar9cr_guunglU7Zqaede4cLFhsCZWBLVHY4cKHgk8SzfH_0Rn3St2AQen9MaiT38L5QXsaq6zFMuGiT8M2Md50eS0JdRTdlWLJApbgAUqI3zltUXce-MaCrDtp_UiI6x3IR4fEZiCo0XDyoAesFjXZg9cIuSsLTiKkSAGzzledJU3crgSHjAIycQN2PH2_dBIa3ibAJLphqq6zLh0qiQn_dHh83ru2y7MgxRU85ithgjdIk3PgplREbW9_PLv5j9juYc1WXFNW9ML80UlTaC9D2rP3i80zESJJY56faKsA5GVCIFiUtc3EewSM_C0bkJSMiobIWiXFz7pMcadgZlweUdjBcjvaepHBe8wou0ZtDM9TKom0hs_nx_AKy0dnXGNWI1qftTjAg=w1920-h979-ft"/>
@@ -84,11 +65,4 @@
   </section>
   {% endblock mainContent %}
 {% block jsLinks %}
-  <script>
-   let subMenu;
-         subMenu= document.getElementById("subMenu");
-    function toggleMenu() {
-      subMenu.classList.toggle("open-menu");
-    }
-  </script>
   {% endblock jsLinks %}

@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
 
 class UserProfile(models.Model):
     EMPLOYMENT_CHOICES = (

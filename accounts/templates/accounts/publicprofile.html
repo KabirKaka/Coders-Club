@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block cssLinksAndTitle %}
+
+  <title>{{object.name }} - Coder's Club</title>
+{% endblock cssLinksAndTitle %}
+{% block body %}
+
+ {% endblock body %}
+{% block mainContent %}
+
+
+{% if request.user.profile.profile_picture %}
+<img class="profile-pic" src="{{request.user.profile.profile_picture.url}}">    
+{% else %}
+<img class="profile-pic" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"/>
+{% endif %}
+
+
+{% endblock mainContent %}
+{% block jsLinks %}
+
+{% endblock jsLinks %}

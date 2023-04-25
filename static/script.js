@@ -2,6 +2,12 @@
 let subMenu = document.getElementById("subMenu");
 function toggleMenu() {
 	subMenu.classList.toggle("open-menu");
+
+  document.addEventListener("click", function(event) {
+    if (event.target.closest('.user-pic') === null && event.target.closest('.sub-menu-wrap') === null) {
+      subMenu.classList.remove('open-menu');
+    }
+  });
 }
 
 /*Interactivity to determine when an animated element in in view. In view elements trigger our animation*/
@@ -75,15 +81,15 @@ function getSelectedValues() {
 	}
 }
 
-function togglePasswordVisibilityReg() {
-  var passwordField = document.getElementById("passwordReg");
-  var showPasswordCheckbox = document.getElementById("showPasswordReg");
-  if (showPasswordCheckbox.checked) {
-    passwordField.type = "text";
-  } else {
-    passwordField.type = "password";
-  }
-}
+// function togglePasswordVisibilityReg() {
+//   var passwordField = document.getElementById("passwordReg");
+//   var showPasswordCheckbox = document.getElementById("showPasswordReg");
+//   if (showPasswordCheckbox.checked) {
+//     passwordField.type = "text";
+//   } else {
+//     passwordField.type = "password";
+//   }
+// }
 function togglePasswordVisibilityLog() {
   var passwordField = document.getElementById("passwordLog");
   var showPasswordCheckbox = document.getElementById("showPasswordLog");

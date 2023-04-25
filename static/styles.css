@@ -26,11 +26,11 @@ nav {
 }
 
 .sub-menu-wrap{
-  background-color: aqua;
+  /* background-color: rgb(0, 0, 0); */
   position: absolute;
   top: 100%;
   right: 0%;
-  width: 220px;
+  width: 150px;
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.5s;
@@ -42,8 +42,9 @@ nav {
 }
 
 .sub-menu{
-  background-color: aquamarine;
+  background-color: rgb(206, 213, 211);
   padding: 10px;
+  padding-left: 20px;
   margin: 5px;
 
 }
@@ -80,12 +81,12 @@ nav {
   text-decoration: none;
   color: black;
   margin-top: 15px;
-}
+} 
 
 .sub-menu-link p {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 80%;
 }
 
 .sub-menu-link img{
@@ -578,12 +579,20 @@ color: #999;
 }
 
 .RegBtn {
-  background-color: #032c64;
+  background-color: #032c64 !important;
   color: white !important;
-  font-weight: bolder;
-min-width: 180px;
- 
+  font-weight: bolder !important;
+  min-width: 180px !important;
 }
+
+.ConfBtn {
+  background-color: #999da3 !important;
+  color: rgb(255, 255, 255) !important;
+  font-weight: bolder !important;
+  min-width: 180px !important;
+  margin-top: 5px;
+}
+
 @media screen and (min-width:200px) and (max-width:500px){
   .RegBtn{
     min-width: 100px !important;
@@ -593,12 +602,6 @@ min-width: 180px;
 .RegBtn:hover {
   background-color: rgb(42 101 157)  !important;
 }
-
-
-
-
-
-
 
 /* Sponsors Page CSS*/
 
@@ -1903,7 +1906,7 @@ margin-bottom: 80px !important;
     margin: 15px 0px;
     border: 1px solid #4f30677d;
     /* padding: 7px 9px; */
-    padding-left: 5px !important;
+    padding-left: 15px !important;
     width: 100%;
     height: 0 !important;
     overflow: hidden;
@@ -3824,8 +3827,8 @@ margin-top: 20px;
 }
 .firstSoc{
   margin-bottom: 33px;
-  margin-top: 20px;
-  padding-bottom: 31px;
+  /* margin-top: 20px; */
+  padding-bottom: 57px;
 }
 .secSoc{
   margin-bottom: 33px;
@@ -3903,7 +3906,7 @@ margin-top: 20px;
 
 .profile-image {
 position: relative;
-top: 40px;
+top: 21px;
 /* left: 20px; */
 color: #666666;
 transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
