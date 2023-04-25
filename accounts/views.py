@@ -126,9 +126,11 @@ def editprofile(request):
 class PublicProfile(DetailView):
     model = UserProfile
     template_name = 'accounts/publicprofile.html'
-    def get_object(self):
-        username = self.kwargs.get('username')
-        return User.objects.get(username=username)  
+    # def get_object(self):
+    #     username = self.kwargs.get('username')
+    #     return User.objects.get(username=username)  
+
+    slug_field = "user__username"
 
 def login(request):
     if request.method == 'POST':
