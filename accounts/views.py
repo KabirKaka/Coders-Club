@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import UserProfile, ClubApplication, Domain
+from .models import UserProfile, ClubApplication, Domain, Position
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django, logout as logout_django
 from django.views.generic import DetailView
@@ -159,7 +159,7 @@ def joinCommunity(request):
         club_application = ClubApplication.objects.create(
             portfolio_link = portfolio_link,
             user=request.user,
-            position = position,
+            position = Position.objects.get(name=position),
         )
 
         for domain in domains:
@@ -173,4 +173,4 @@ def joinCommunity(request):
         if not request.user.is_authenticated:
             return redirect('account-login')
         else:            
-            return render(request, "accounts/joincommunity.html", {'domains': Domain.objects.all()})
+            return render(request, "accounts/joincommunity.html", {'domains': Domain.objects.all(), 'positions': Position.objects.all()})

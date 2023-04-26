@@ -73,18 +73,18 @@
                   <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
 
                     <h6 class="mb-0 me-4">Position: </h6>
-                    
+                    {% for position in positions %}
                     <div class="form-check form-check-inline mb-0 me-4">
                       <input class="form-check-input regRadio" type="radio" name="position" id="TeamLead"
-                      value="Team Lead" required />
-                      <label class="form-check-label" for="TeamLead">Team Lead</label>
+                      value="{{ position.name }}" required />
+                      <label class="form-check-label" for="TeamLead">{{ position.name }}</label>
                     </div>
-                    
-                    <div class="form-check form-check-inline mb-0 me-4">
+                    {% endfor %}
+                    <!-- <div class="form-check form-check-inline mb-0 me-4">
                       <input class="form-check-input regRadio" type="radio" name="position" id="TeamMember"
                     value="Team Member"/>
                       <label class="form-check-label" for="TeamMember">Team Member</label>
-                    </div>
+                    </div> -->
                   </div>
 
               </div>

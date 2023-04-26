@@ -81,7 +81,13 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+class Position(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
 class Domain(models.Model):
     name = models.CharField(max_length=20)
 
@@ -89,13 +95,10 @@ class Domain(models.Model):
         return self.name
 
 class ClubApplication(models.Model):
-    POSITION_CHOICES = (
-        ('Team Lead', 'Team Lead'),
-        ('Team Member', 'Team Member'),
-    )
+
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='applications')
-    position = models.CharField(max_length=20, choices=POSITION_CHOICES)
+    position = models.ForeignKey(Position, on_delete=models.CASCADE, related_name='applications')
     domains = models.ManyToManyField(Domain, blank=True)
     portfolio_link = models.URLField(blank=True, null=True)
     applied_date = models.DateTimeField(auto_now_add=True)
@@ -118,7 +121,7 @@ class ClubMembership(models.Model):
         ('Team Member', 'Team Member'),
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='memberships')
-    position = models.CharField(max_length=20, choices=POSITION_CHOICES)
+    position = models.ForeignKey(Position, on_delete=models.CASCADE, related_name='memberships')
     domain = models.ForeignKey(Domain, on_delete=models.CASCADE, related_name='memberships')
     application = models.OneToOneField(ClubApplication, on_delete=models.CASCADE, related_name='memberships', null=True)
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile, Domain, ClubApplication, ClubMembership
+from .models import UserProfile, Domain, ClubApplication, ClubMembership, Position
 from django.contrib.auth.models import User
 
 class UserProfileAdmin(admin.ModelAdmin):
@@ -8,6 +8,8 @@ class UserProfileAdmin(admin.ModelAdmin):
 admin.site.register(UserProfile, UserProfileAdmin)
 
 admin.site.register(Domain)
+
+admin.site.register(Position)
 
 class ClubMembershipInline(admin.StackedInline):
     model = ClubMembership
