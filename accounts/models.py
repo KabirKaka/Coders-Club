@@ -1,7 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
-from django.shortcuts import render, redirect
 import datetime
 from django.utils import timezone
 
@@ -84,13 +82,6 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.name
     
-# DOMAIN_CHOICES = (
-#     ('Graphic Designing', 'Graphic Designing'),
-#     ('Web Designing', 'Web Designing'),
-#     ('AI', 'AI'),
-#     ('App Development', 'App Development'),
-# )
-
 class Domain(models.Model):
     name = models.CharField(max_length=20)
 
@@ -129,6 +120,10 @@ class ClubMembership(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='memberships')
     position = models.CharField(max_length=20, choices=POSITION_CHOICES)
     domain = models.ForeignKey(Domain, on_delete=models.CASCADE, related_name='memberships')
+    application = models.OneToOneField(ClubApplication, on_delete=models.CASCADE, related_name='memberships', null=True)
+
+    def is_team_lead(self):
+        return self.position == 'Team Lead'
     
     def __str__(self):
         return f"{self.user.username} - {self.position} - {self.domain}"
