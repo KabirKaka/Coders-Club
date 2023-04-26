@@ -1446,7 +1446,7 @@ img {
   transition: transform 0.3s;
 }
 .card-hover__extra {
-  height: 50%;
+  height: 63%;
   position: absolute;
   display: flex;
   align-items: center;

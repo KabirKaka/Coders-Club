@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 import datetime
+from django.utils import timezone
 
 class UserProfile(models.Model):
     EMPLOYMENT_CHOICES = (
@@ -82,3 +83,53 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.name
+    
+# DOMAIN_CHOICES = (
+#     ('Graphic Designing', 'Graphic Designing'),
+#     ('Web Designing', 'Web Designing'),
+#     ('AI', 'AI'),
+#     ('App Development', 'App Development'),
+# )
+
+class Domain(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+class ClubApplication(models.Model):
+    POSITION_CHOICES = (
+        ('Team Lead', 'Team Lead'),
+        ('Team Member', 'Team Member'),
+    )
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='applications')
+    position = models.CharField(max_length=20, choices=POSITION_CHOICES)
+    domains = models.ManyToManyField(Domain, blank=True)
+    portfolio_link = models.URLField(blank=True, null=True)
+    applied_date = models.DateTimeField(auto_now_add=True)
+    accepted = models.BooleanField(blank=True, null=True)
+
+    def __str__(self):
+        local_time = timezone.localtime(self.applied_date, timezone=timezone.get_fixed_timezone(300))
+        if local_time.date() != timezone.localdate():
+            # Display date only if it's not today
+            formatted_time = local_time.strftime("%B %d, %Y")
+        else:
+            # Display time only if it's today
+            formatted_time = local_time.strftime("%I:%M %p")
+        domains_list = [d.name for d in self.domains.all()]            
+        return f"{self.user.profile.name} - {self.position} ({', '.join(domains_list)}) - {formatted_time}"
+    
+class ClubMembership(models.Model):
+    POSITION_CHOICES = (
+        ('Team Lead', 'Team Lead'),
+        ('Team Member', 'Team Member'),
+    )
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='memberships')
+    position = models.CharField(max_length=20, choices=POSITION_CHOICES)
+    domain = models.ForeignKey(Domain, on_delete=models.CASCADE, related_name='memberships')
+    
+    def __str__(self):
+        return f"{self.user.username} - {self.position} - {self.domain}"
+

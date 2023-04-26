@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
-from .models import UserProfile
+from .models import UserProfile, ClubApplication, Domain
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django, logout as logout_django
 from django.views.generic import DetailView
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
+from django.utils import timezone
 import os
 
 def save_profile_picture(profile_picture):
@@ -126,10 +127,6 @@ def editprofile(request):
 class PublicProfile(DetailView):
     model = UserProfile
     template_name = 'accounts/publicprofile.html'
-    # def get_object(self):
-    #     username = self.kwargs.get('username')
-    #     return User.objects.get(username=username)  
-
     slug_field = "user__username"
 
 def login(request):
@@ -154,7 +151,26 @@ def logout(request):
     return redirect('account-login')
 
 def joinCommunity(request):
-    if not request.user.is_authenticated:
-        return redirect('account-login')
-    else:            
-        return render(request, "accounts/joincommunity.html")
+    if request.method == 'POST':
+        portfolio_link = request.POST.get('portfolio_link')
+        domains = request.POST.getlist('domains')        
+        position = request.POST.get('position')
+
+        club_application = ClubApplication.objects.create(
+            portfolio_link = portfolio_link,
+            user=request.user,
+            position = position,
+        )
+
+        for domain in domains:
+            author = Domain.objects.get(name=domain)
+            club_application.domains.add(author)
+
+        club_application.applied_date = timezone.now()
+        success_message = "Application submitted!"
+        return render(request, 'accounts/joincommunity.html', {'success_message': success_message})
+    else:
+        if not request.user.is_authenticated:
+            return redirect('account-login')
+        else:            
+            return render(request, "accounts/joincommunity.html", {'domains': Domain.objects.all()})
