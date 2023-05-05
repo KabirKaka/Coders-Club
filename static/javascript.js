@@ -1,0 +1,275 @@
+// navbar
+let subMenu;
+subMenu = document.getElementById("subMenu");
+function toggleMenu() {
+  subMenu.classList.toggle("open-menu");
+}
+
+
+// image slider
+
+var swiper = new Swiper(".slide-content", {
+	slidesPerView: 3,
+	spaceBetween: 25,
+	loop: true,
+	centerSlide: "true",
+	fade: "true",
+	grabCursor: "true",
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		520: {
+			slidesPerView: 2,
+		},
+		950: {
+			slidesPerView: 3,
+		},
+	},
+});
+
+// events
+
+// buttons
+event_nav = document.getElementById("event-nav");
+live_btn = event_nav.children[0];
+upcoming_btn = event_nav.children[1];
+previous_btn = event_nav.children[2];
+
+live_btn.onclick = () => {
+	live_btn.classList.add("active");
+	upcoming_btn.classList.remove("active");
+	previous_btn.classList.remove("active");
+};
+upcoming_btn.onclick = () => {
+	upcoming_btn.classList.add("active");
+	live_btn.classList.remove("active");
+	previous_btn.classList.remove("active");
+};
+previous_btn.onclick = () => {
+	previous_btn.classList.add("active");
+	upcoming_btn.classList.remove("active");
+	live_btn.classList.remove("active");
+};
+
+// timer
+const createCounter = (date, event, button) => {
+	// Set the deadline date and time
+	var deadline = new Date(date);
+
+	// Update the timer every second
+	var x = setInterval(function () {
+		// Get the current date and time
+		var now = new Date().getTime();
+
+		// Calculate the time remaining between the deadline and the current date and time
+		var timeRemaining = deadline - now;
+
+		// Calculate the days, hours, minutes, and seconds remaining
+		var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+		var hours = Math.floor(
+			(timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+		);
+		var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+		// Update the HTML with the remaining time
+
+		event.innerHTML = `<div id="days" class="inline-block">
+											<div id="days-1" class="inline-block large dark">${days
+												.toString()
+												.charAt(0)}</div>
+											<div id="days-0" class="inline-block large dark">${days
+												.toString()
+												.charAt(1)}</div>
+											<div id="colon" class="inline-block large dark">:</div>
+											<div id="days-text">Days</div>
+										</div>
+										<div id="hours" class="inline-block">
+											<div id="hours-1" class="inline-block large dark">${hours
+												.toString()
+												.charAt(0)}</div>
+											<div id="hours-0" class="inline-block large dark">${hours
+												.toString()
+												.charAt(1)}</div>
+											<div id="colon" class="inline-block large dark">:</div>
+											<div id="hours-text">Hours</div>
+										</div>
+										<div id="minutes" class="inline-block align-left">
+											<div id="minutes-1" class="inline-block large dark">
+                      ${minutes.toString().charAt(0)}
+											</div>
+											<div id="minutes-0" class="inline-block large dark">
+                      ${minutes.toString().charAt(1)}
+											</div>
+											<div id="colon" class="inline-block large dark">:</div>
+											<div id="minutes-text">Minutes</div>
+										</div>
+										<div id="seconds" class="inline-block align-left">
+											<div id="seconds-1" class="inline-block large dark">
+                      ${seconds.toString().charAt(0)}
+											</div>
+											<div id="seconds-0" class="inline-block large dark">
+                      ${seconds.toString().charAt(1)}
+											</div>
+											<div id="seconds-text">Seconds</div>
+										</div>`;
+
+		// If the countdown is finished, display a message
+		if (timeRemaining < 0) {
+			clearInterval(x);
+			event.innerHTML = `<div class="text-15">
+    We are no longer accepting entries. Thank you for your generous interest.
+</div>`;
+			button.innerHTML = "";
+			// event.previousElementSibling.innerHTML = "";
+			event.previousElementSibling.style.visibility = "hidden";
+		}
+	}, 1000);
+};
+
+live_events = document.getElementsByClassName("timer");
+live_events_buttons = document.getElementsByClassName("challenge-button");
+live_events_time = [
+	"2023-05-28T06:05:30",
+	"2023-05-20T23:59:59",
+	"2023-04-22T23:59:59",
+	"2023-04-29T23:59:59",
+];
+for (let index = 0; index < live_events.length; index++) {
+	createCounter(
+		live_events_time[index],
+		live_events[index],
+		live_events_buttons[index]
+	);
+}
+
+
+
+
+/*Interactivity to determine when an animated element in in view. In view elements trigger our animation*/
+
+$(document).ready(function() {
+
+    //window and animation items
+    var animation_elements = $.find('.animation-element');
+    var web_window = $(window);
+  
+    //check to see if any animation containers are currently in view
+    function check_if_in_view() {
+      //get current window information
+      var window_height = web_window.height();
+      var window_top_position = web_window.scrollTop();
+      var window_bottom_position = (window_top_position + window_height);
+  
+      //iterate through elements to see if its in view
+      $.each(animation_elements, function() {
+  
+        //get the element sinformation
+        var element = $(this);
+        var element_height = $(element).outerHeight();
+        var element_top_position = $(element).offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+  
+        //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+        if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+          element.addClass('in-view');
+        } else {
+          element.removeClass('in-view');
+        }
+      });
+  
+    }
+  
+    //on or scroll, detect elements in view
+    $(window).on('scroll resize', function() {
+        check_if_in_view()
+      })
+      //trigger our scroll event on initial load
+    $(window).trigger('scroll');
+  
+  });
+
+
+
+
+
+// Registration Section
+function show1(){
+  document.getElementById('div1').style.display ='none';
+  document.getElementById('form3Example1T').required = false;
+  document.getElementById('form3Example1L').required = false;
+}
+
+function show2(){
+  document.getElementById('div1').style.display = 'block';
+  document.getElementById('form3Example1T').required = true;
+  document.getElementById('form3Example1L').required = true;
+}
+
+
+
+
+
+
+$(document).ready(function() {
+  $('#multiselect').multiselect({
+    buttonWidth : '160px',
+    includeSelectAllOption : true,
+		nonSelectedText: 'Select an Option'
+  });
+});
+
+function getSelectedValues() {
+  var selectedVal = $("#multiselect").val();
+	for(var i=0; i<selectedVal.length; i++){
+		function innerFunc(i) {
+			setTimeout(function() {
+				location.href = selectedVal[i];
+			}, i*2000);
+		}
+		innerFunc(i);
+	}
+}
+
+// function togglePasswordVisibilityReg() {
+//   var passwordField = document.getElementById("passwordReg");
+//   var showPasswordCheckbox = document.getElementById("showPasswordReg");
+//   if (showPasswordCheckbox.checked) {
+//     passwordField.type = "text";
+//   } else {
+//     passwordField.type = "password";
+//   }
+// }
+function togglePasswordVisibilityLog() {
+  var passwordField = document.getElementById("passwordLog");
+  var showPasswordCheckbox = document.getElementById("showPasswordLog");
+  if (showPasswordCheckbox.checked) {
+    passwordField.type = "text";
+  } else {
+    passwordField.type = "password";
+  }
+}
+
+
+// image slider
+  
+  // Show the modal when the form is submitted
+  contModal.classList.add("showCont");
+  
+  // Hide the modal after 4 seconds
+  setTimeout(function() {
+    contModal.classList.remove("showCont");
+  }, 3000);
+
+
