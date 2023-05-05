@@ -55,10 +55,14 @@ $(document).ready(function() {
 
 function show1(){
   document.getElementById('div1').style.display ='none';
+  document.getElementById('form3Example1T').required = false;
+  document.getElementById('form3Example1L').required = false;
 }
 
 function show2(){
   document.getElementById('div1').style.display = 'block';
+  document.getElementById('form3Example1T').required = true;
+  document.getElementById('form3Example1L').required = true;
 }
 
 $(document).ready(function() {

@@ -25,15 +25,15 @@
     <a href="#ClubSections" class="btn my-4 RegBtn">Join Now</a>
 </div>
 </div>
-<div class="paraDivClub">
-  <h1>Heading</h1>
-  <p >Are you interested in learning how to code? Do you want to develop the skills needed to create websites and apps? Then our coding club is the perfect place for you!</p>
+  <!-- <div class="paraDivClub">
     <h1>Heading</h1>
-      <p >So why wait? Join our coding club today and start your journey to becoming a skilled programmer! </p>
-      <h2>heading</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eligendi nobis placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsa accusantium ipsam perferendis natus? At modi voluptatem perspiciatis ullam animi.</p>
+    <p >Are you interested in learning how to code? Do you want to develop the skills needed to create websites and apps? Then our coding club is the perfect place for you!</p>
+      <h1>Heading</h1>
+        <p >So why wait? Join our coding club today and start your journey to becoming a skilled programmer! </p>
+        <h2>heading</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eligendi nobis placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsa accusantium ipsam perferendis natus? At modi voluptatem perspiciatis ullam animi.</p>
 
-</div>
+  </div> -->
 <div class="container ClubSections mt-6" id="ClubSections">
  <!-- Community Form -->
 
@@ -49,7 +49,7 @@
               {% csrf_token %}
               <div class="Reg_flex ">
 
-                <div class="d-flex align-item-center justify-content-center"><img id="regLogo"  src="{{ MEDIA_URL }}static-images/Club/c7.png" alt=""></div>
+                <div class="d-flex align-item-center justify-content-center"><img id="regLogo"  src="{{ MEDIA_URL }}static-images/Club/c10.png" alt=""></div>
                 <div class="form-heading mb-5 text-uppercase d-flex flex-wrap justify-content-center align-item-center text-center">JOIN OUR CLUB!</div>
               </div>
               <!-- radio button -->
@@ -75,9 +75,9 @@
                     <h6 class="mb-0 me-4">Position: </h6>
                     {% for position in positions %}
                     <div class="form-check form-check-inline mb-0 me-4">
-                      <input class="form-check-input regRadio" type="radio" name="position" id="TeamLead"
+                      <input class="form-check-input regRadio" type="radio" name="position" id="{{ position.name|slugify }}"
                       value="{{ position.name }}" required />
-                      <label class="form-check-label" for="TeamLead">{{ position.name }}</label>
+                      <label class="form-check-label" for="{{ position.name|slugify }}">{{ position.name }}</label>
                     </div>
                     {% endfor %}
                     <!-- <div class="form-check form-check-inline mb-0 me-4">
@@ -91,7 +91,7 @@
               
 
               <div class="d-flex justify-content-end pt-3">
-                <button type="submit" class="btn RegBtn">Apply Now!</button>
+                <button type="submit" class="btn RegBtn">Apply</button>
               </div>
             </div>
 

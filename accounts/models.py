@@ -95,8 +95,6 @@ class Domain(models.Model):
         return self.name
 
 class ClubApplication(models.Model):
-
-
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='applications')
     position = models.ForeignKey(Position, on_delete=models.CASCADE, related_name='applications')
     domains = models.ManyToManyField(Domain, blank=True)
