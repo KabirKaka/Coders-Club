@@ -145,16 +145,15 @@ nav {
 }
 .modalCont {
   display:block;
-    position: sticky;
-    z-index: 1;
-    left: 8%;
-    /* top: 78%; */
-    width: 22%;
-    height: auto;
-    background-color: none;
-    border: none;
-    opacity: 0;
-    transition:opacity 0.3s ease-in-out;
+  position: fixed;
+  top: 520px;
+  left: 8%;
+  width: 22%;
+  height: auto;
+  background-color: none;
+  border: none;
+  opacity: 0;
+  transition:opacity 0.3s ease-in-out;
   }
   .modalCont.showCont {
    display: block;
@@ -173,6 +172,8 @@ nav {
     padding-top: 12px;
     display: flex; 
     flex-direction: row;
+    position: sticky;
+    top: 40px !important;
   }
   .modal-content-cont img{
     margin-top: -2px;
@@ -410,9 +411,8 @@ nav {
 
 .formContact {
   /* margin-top: 60px; */
-  margin-bottom: 46px
+  margin-bottom: 80px
 }
-
 /* .sideContact {
   margin-top: 60px;
 } */
