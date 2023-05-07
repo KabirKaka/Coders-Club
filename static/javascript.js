@@ -38,29 +38,38 @@ var swiper = new Swiper(".slide-content", {
 	},
 });
 
+
+// leaderboard
+
+let leaderboardSelector = document.getElementById("Leaderboard-selector")
+leaderboardSelector.onclick(()=>{
+	
+})
+
+
 // events
 
 // buttons
-event_nav = document.getElementById("event-nav");
-live_btn = event_nav.children[0];
-upcoming_btn = event_nav.children[1];
-previous_btn = event_nav.children[2];
+// event_nav = document.getElementById("event-nav");
+// live_btn = event_nav.children[0];
+// upcoming_btn = event_nav.children[1];
+// previous_btn = event_nav.children[2];
 
-live_btn.onclick = () => {
-	live_btn.classList.add("active");
-	upcoming_btn.classList.remove("active");
-	previous_btn.classList.remove("active");
-};
-upcoming_btn.onclick = () => {
-	upcoming_btn.classList.add("active");
-	live_btn.classList.remove("active");
-	previous_btn.classList.remove("active");
-};
-previous_btn.onclick = () => {
-	previous_btn.classList.add("active");
-	upcoming_btn.classList.remove("active");
-	live_btn.classList.remove("active");
-};
+// live_btn.onclick = () => {
+// 	live_btn.classList.add("active");
+// 	upcoming_btn.classList.remove("active");
+// 	previous_btn.classList.remove("active");
+// };
+// upcoming_btn.onclick = () => {
+// 	upcoming_btn.classList.add("active");
+// 	live_btn.classList.remove("active");
+// 	previous_btn.classList.remove("active");
+// };
+// previous_btn.onclick = () => {
+// 	previous_btn.classList.add("active");
+// 	upcoming_btn.classList.remove("active");
+// 	live_btn.classList.remove("active");
+// };
 
 // timer
 const createCounter = (date, event, button) => {
