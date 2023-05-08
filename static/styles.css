@@ -2891,7 +2891,7 @@ ul {
 
 
 #Leaderboard-selector{
-	background-color: rgb(68,6,94);
+	background-color: var(--light-theme-color);
 	padding: 5px;
 	margin-bottom: 10px;
 	border-radius: 8px;
@@ -2932,10 +2932,21 @@ tbody th{
 
 tbody tr td a{
    text-decoration: none; 
+   color: var(--light-theme-colortheme-color);
+
 }
 
 tbody tr td a:hover{
    text-decoration: underline; 
+}
+
+
+#box-2 {
+	display: none;
+}
+
+#box-3 {
+	display: none;
 }
 
 
