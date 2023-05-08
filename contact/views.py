@@ -28,7 +28,7 @@ def contact(request):
         #     fail_silently=False,
         # )
         messages.success(request, 'Your message has been submitted.')
-        return render(request, 'contact/contact.html')
+        return render(request, 'contact/contact.html', {"success": True})
     else:
         # Render the contact form
         return render(request, 'contact/contact.html')

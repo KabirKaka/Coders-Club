@@ -102,13 +102,15 @@
    </div>
   </div>
  </div>
+ {% if success %}
  <div id="myModalCont" class="modalCont">
     <div class="modal-content-cont">
      <img src="{{MEDIA_URL}}static-images/contactSection/ch7.png" alt="">
-      <p>Your Message has Been Sent!</p>
+      <p>Your message has been sent</p>
    
     </div>
   </div>
+  {% endif %}
  {% endblock mainContent %}
  {% block jsLinks %}
  <script>
