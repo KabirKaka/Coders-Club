@@ -4,26 +4,27 @@
 <body>
 	{% endblock body %} {% block mainContent %}
 
-	<div class="leaderboard-body">
-		<section class="intro">
+	<div id="leaderboard-body">
+		<section id="intro">
 			<div
 				class="bg-image h-100 m-auto"
-				style="background-image: url(https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80); background-repeat: no-repeat; background-position: center; background-size: cover;">
+				style="background-image: url(https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80); background-position: center; background-size: cover;">
 				<div
 					id="HTML CSS JS"
 					class="mask d-flex align-items-center flex-column justify-content-center m-auto h-100"
 				>
-					<div class="mb-4">
+					<div class="mb-3 mt-5">
 						<select
 							class="select m-auto d-flex text-white"
 							id="Leaderboard-selector"
 						>
+							<option value="0">...</option>
 							<option value="1">HTML CSS JS</option>
 							<option value="2">Data Science</option>
 							<option value="3">AI Project</option>
 						</select>
 					</div>
-					<div class="container" id="box-1">
+					<div class="container m-4" id="box-1">
 						<div class="row justify-content-center">
 							<div class="col-12">
 								<div class="card mask-custom">
@@ -82,7 +83,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="container" id="box-2">
+					<div class="container m-4" id="box-2">
 						<div class="row justify-content-center">
 							<div class="col-12">
 								<div class="card mask-custom">
@@ -141,7 +142,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="container" id="box-3">
+					<div class="container m-4" id="box-3">
 						<div class="row justify-content-center">
 							<div class="col-12">
 								<div class="card mask-custom">

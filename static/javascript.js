@@ -45,6 +45,9 @@ selectElement.addEventListener("change", function () {
 	const selectedOption = selectElement.options[selectElement.selectedIndex];
 
 	switch (selectedOption.value) {
+		case "0":
+			handleOption0Click();
+			break;
 		case "1":
 			handleOption1Click();
 			break;
@@ -55,7 +58,6 @@ selectElement.addEventListener("change", function () {
 			handleOption3Click();
 			break;
 		default:
-			// Handle default case here
 			break;
 	}
 });
@@ -65,6 +67,8 @@ function handleOption1Click() {
 	document.getElementById("box-1").style.display = "block";
 	document.getElementById("box-2").style.display = "none";
 	document.getElementById("box-3").style.display = "none";
+	document.getElementById("intro").style.height = "565px";
+	
 }
 
 function handleOption2Click() {
@@ -72,6 +76,7 @@ function handleOption2Click() {
 	document.getElementById("box-1").style.display = "none";
 	document.getElementById("box-2").style.display = "block";
 	document.getElementById("box-3").style.display = "none";
+	document.getElementById("intro").style.height = "565px";
 }
 
 function handleOption3Click() {
@@ -79,6 +84,14 @@ function handleOption3Click() {
 	document.getElementById("box-1").style.display = "none";
 	document.getElementById("box-2").style.display = "none";
 	document.getElementById("box-3").style.display = "block";
+	document.getElementById("intro").style.height = "565px";
+}
+function handleOption0Click() {
+	// Code to execute when the option "..." is selected
+	document.getElementById("box-1").style.display = "block";
+	document.getElementById("box-2").style.display = "block";
+	document.getElementById("box-3").style.display = "block";
+	document.getElementById("intro").style.height = "1200px";
 }
 
 // events

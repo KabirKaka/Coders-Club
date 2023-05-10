@@ -2899,12 +2899,7 @@ ul {
 	text-align: center;
 }
 
-.leaderboard-body{
-	height: 600px;
-}
-.intro {
-	height: 100%;
-}
+
 
 table td,
 table th {
@@ -2940,14 +2935,6 @@ tbody tr td a:hover{
    text-decoration: underline; 
 }
 
-
-#box-2 {
-	display: none;
-}
-
-#box-3 {
-	display: none;
-}
 
 
 /* gallery */
