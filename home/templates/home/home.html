@@ -12,24 +12,23 @@
       <h1 class="fs-1">Enjoy the Ultimate</h1>
       <h1>Coder's Club Experience</h1>
       <a href="{% url 'account-joincommunity' %}">
-        <button type="button" class="btn RegBtn">Join Our Club</button>
+        <button type="button" class="btn RegBtn mt-3">Join Our Club</button>
       </a>
     </div>
   </div>
 
   <div class="about">
 
-    <h6 class=" text-center py-4 "><a class="text-color-theme text-decoration-none">About Us</a></h6>
+    <h4 class=" text-center py-4 "><a class="text-color-theme text-decoration-none">About Us</a></h4>
     <div class="d-flex justify-content-center mx-auto flex-wrap">
       <div id="left-about">
-        <h6 ><a class="text-color-theme text-decoration-none">Coding Training</a></h6>
         <h1>Take your Experience</h1>
         <h1>To Next Level</h1>
-        <p>
+        <p class="text-justify">
           Welcome to our coding club! We are a community of like-minded individuals who share a passion for technology and programming. Our goal is to provide a supportive and inclusive space for people of all skill levels to learn, practice, and collaborate on coding projects. Whether you're a seasoned developer or just starting out, we welcome you to join us on our journey to explore the vast world of computer programming. We offer regular meetings, workshops, and hackathons where members can learn new skills, share ideas, and work together on exciting projects. Come join us and discover the thrill of coding!
         </p>
         <a href="{% url 'about' %}">
-        <button type="button" class="btn RegBtn">About Us</button>
+        <button type="button" class="btn RegBtn">Read More</button>
         </a>
       </div>
       <div id="right-about">
@@ -40,7 +39,7 @@
   </div>
 
   <div class="events align-center">
-    <h6 class="text-center py-3 "><a class="text-color-theme text-decoration-none">Our Events</a></h6>
+    <h4 class="text-center py-3 "><a class="text-color-theme text-decoration-none">Our Events</a></h4>
     <div class="event-body d-flex justify-content-center mx-auto flex-wrap">
       {% for item in allgallery_post  %}
       <div class="event-card" style="width: 18rem;">
@@ -152,9 +151,9 @@
 
   <!-- our team section -->
   <section class="our-webcoderskull padding-lg">
+    <h4 class="text-center py-3 "><a class="text-color-theme text-decoration-none">Our Team</a></h4>
     <div class="container">
       <div class="row ourTeamRow heading heading-icon ">
-        <h2><a class="text-color-theme text-decoration-none">Our Team</a></h2>
       </div>
       <ul class="row">
         <li class="col-12 col-md-6 col-lg-3">

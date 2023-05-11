@@ -11,6 +11,7 @@
 	--glow-color: hsl(200, 16%, 96%);
 }
 
+
 .text-color-theme{
   color: var(--theme-color);
 }
@@ -2100,7 +2101,7 @@ a:focus::after {
 /* home */
 
 #home-top {
-	height: 100vh;
+	height: 90vh;
 	background-image: url("../media/static-images/home1.jpg");
 	background-repeat: no-repeat;
 	/* animation: changeBg 5s es infinite alternate; */
@@ -2424,6 +2425,7 @@ ul {
 	background-size: cover;
 }
 .our-webcoderskull .cnt-block {
+	border-radius: 20px;
 	float: left;
 	width: 100%;
 	/* background:#fff;  */
