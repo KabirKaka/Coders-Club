@@ -8,24 +8,23 @@
 {% block mainContent %}
   <div id="home-top">
     <div class="home-content text-light position-absolute top-50 start-50 translate-middle">
-      <h6><a class=" text-decoration-none text-white">WELCOME TO THE CLUB</a></h6>
-      <h1 class="fs-1">Enjoy the Ultimate</h1>
+      <h6><a class=" text-decoration-none text-white">WELCOME TO Koders Club</a></h6>
+      <h1>Enjoy the Ultimate</h1>
       <h1>Coder's Club Experience</h1>
       <a href="{% url 'account-joincommunity' %}">
-        <button type="button" class="btn RegBtn">Join Our Club</button>
+        <button type="button" class="btn RegBtn mt-3">Join Our Club</button>
       </a>
     </div>
   </div>
 
-  <div class="about">
+  <div class="about mt-3">
 
-    <h6 class="text-primary text-center py-4 "><a class=" text-decoration-none">About Us</a></h6>
+    <h4 class=" text-center py-4 "><a class="text-color-theme text-decoration-none">About Us</a></h4>
     <div class="d-flex justify-content-center mx-auto flex-wrap">
       <div id="left-about">
-        <h6 class="text-primary "><a class=" text-decoration-none">Coding Training</a></h6>
-        <h1>Take your Experience</h1>
-        <h1>To Next Level</h1>
-        <p>
+        <h1 class="text-color-theme">Take your Experience</h1>
+        <h1 class="text-color-theme">To Next Level</h1>
+        <p class="text-color-theme" >
           Welcome to our coding club! We are a community of like-minded individuals who share a passion for technology and programming. Our goal is to provide a supportive and inclusive space for people of all skill levels to learn, practice, and collaborate on coding projects. Whether you're a seasoned developer or just starting out, we welcome you to join us on our journey to explore the vast world of computer programming. We offer regular meetings, workshops, and hackathons where members can learn new skills, share ideas, and work together on exciting projects. Come join us and discover the thrill of coding!
         </p>
         <a href="{% url 'about' %}">
@@ -38,18 +37,20 @@
       </div>
     </div>
   </div>
-
+  <br>
+<div class="smallLine"></div>
+<br>
   <div class="events align-center">
-    <h6 class="text-primary text-center py-3 "><a class=" text-decoration-none">Our Events</a></h6>
+    <h4 class="text-center py-3 "><a class="text-color-theme text-decoration-none">Our Events</a></h4>
     <div class="event-body d-flex justify-content-center mx-auto flex-wrap">
       {% for item in allgallery_post  %}
       <div class="event-card" style="width: 18rem;">
        <img alt="..." class="card-img-top" src="/media/{{item.cover_image}}"/>
        <div class="card-details">
-        <h5 class="text-title mt-3">
+        <h5 class="text-title mt-3 card-title">
          {{item.event}}
         </h5>
-        <p class="text-body">
+        <p class="text-body card-text mt-2">
          {{item.title}}
         </p>
        </div>
@@ -90,11 +91,13 @@
       </div> -->
 
     </div>
-    <div class=" d-grid gap-2 col-2 mx-auto pt-5 pb-4">
+    <div class="d-flex justify-content-center pt-3 pb-4">
       <button type="button" class="btn RegBtn ">More Events</button>
     </div>
   </div>
-
+  <br>
+  <div class="smallLine"></div>
+  <br>
   <!-- blog section -->
 <!-- 
   <section class="details-card">
@@ -151,15 +154,15 @@
   </section> -->
 
   <!-- our team section -->
-  <section class="our-webcoderskull padding-lg">
+  <section class="our-webcoderskull">
+    <h4 class="text-center py-3 "><a class="text-color-theme text-decoration-none">Our Team</a></h4>
     <div class="container">
       <div class="row ourTeamRow heading heading-icon ">
-        <h2 class="text-dark "><a class=" text-decoration-none">Our Team</a></h2>
       </div>
       <ul class="row">
         <li class="col-12 col-md-6 col-lg-3">
           <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="http://www.webcoderskull.com/img/team4.png" class="img-responsive" alt=""></figure>
+            <figure><img src="http://www.webcoderskull.com/img/team4.png"  class="img-responsive" alt=""></figure>
             <h3><a href="http://www.webcoderskull.com/">Web coder skull</a></h3>
             <p>Freelance Web Developer</p>
             <ul class="follow-us clearfix">
@@ -208,70 +211,59 @@
       </ul>
     </div>
   </section>
+  <br>
+  <div class="smallLine"></div>
+  <br>
+  <!-- <div class="smallLine"></div> -->
 
   <!-- FAQ section -->
-  <h6 class="text-primary text-center mt-3 "><a class=" text-decoration-none">FAQs</a></h6>
-  <div class="faq my-5">
+  <div class="faq mb-4">
+    <h6 class="text-center  "><a class="text-color-theme text-decoration-none">FAQs</a></h6>
     <div class="d-flex justify-content-evenly mx-auto flex-wrap">
       <div id="left-faq">
-        <h6 class="text-primary">PEOPLE ASK</h6>
-        <div class="accordion" id="accordionExample">
+        <h4 class="text-color-theme">PEOPLE ASK</h4>
+        <div class="accordion faqAdjust" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-                Question 1
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                What is Koders Club and how can we join it?
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the
-                overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Accordion Item #2
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the
-                overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Accordion Item #3
               </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the
-                overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="right-faq">
+      <!-- <div id="right-faq">
         <img id="right-faq-img2" src="{{ MEDIA_URL }}static-images/icons/faq1.png" alt="" />
-      </div>
+      </div> -->
     </div>
   </div>
  {% endblock mainContent %}
