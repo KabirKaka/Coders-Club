@@ -2132,7 +2132,7 @@ a:focus::after {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background:  url("../media/static-images/home/faq.jpg") no-repeat center/cover;
+		background: rgb(42, 42, 150);
 		z-index: -1;
 		opacity: 0.2;
 		width: 90%;
@@ -2141,7 +2141,7 @@ a:focus::after {
 	  }
 
 .about h4 a, .events h4 a,.our-webcoderskull h4 a,h6 a{
-	font-size: 60px;
+	font-size: 40px;
 	font-weight: bolder;
 	text-transform: uppercase;
 }
@@ -2188,7 +2188,7 @@ position: relative;
 	position: absolute;
 	top: 0;
 	left: 0;
-	background:  url("../media/static-images/home/home3.jpg") no-repeat center/cover;
+	background: rgb(42, 42, 150);
 	z-index: -1;
 	border-radius: 30px;
 	/* transition: 0.5s ease-in-out; */
@@ -2212,6 +2212,7 @@ position: relative;
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
+	font-size: 35px !important;
 }
 
 #right-about {
@@ -2256,7 +2257,7 @@ position: relative;
 		position: absolute;
 		top: 0;
 		left: 0;
-		background:  url("../media/static-images/home/home3.jpg") no-repeat center/cover;
+		background:  rgb(42, 42, 150);
 		z-index: -1;
 		opacity: 0.2;
 		width: 90%;
@@ -2338,10 +2339,11 @@ position: relative;
 	width: 70%;
 }
 .faqAdjust h2 button{
-	background-image: linear-gradient(to right, #bbbae5, #3d806c) !important;
+	/* background-image: linear-gradient(to right, #bbbae5, #69867e) !important; */
+	background-color: #bcdcf5;
 	font-weight: bolder;
 	font-size: 1.4rem !important;
-	color:rgb(251, 251, 253);
+	color:rgb(25, 25, 82);
 	font-style: italic;
 }
 
@@ -2559,7 +2561,7 @@ ul {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background:  url("../media/static-images/home/home3.jpg") no-repeat center/cover;
+		background: rgb(42, 42, 150);
 		z-index: -1;
 		opacity: 0.2;
 		width: 90%;
