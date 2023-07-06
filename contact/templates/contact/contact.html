@@ -102,30 +102,27 @@
    </div>
   </div>
  </div>
+ {% if success %}
  <div id="myModalCont" class="modalCont">
     <div class="modal-content-cont">
      <img src="{{MEDIA_URL}}static-images/contactSection/ch7.png" alt="">
-      <p>Your Message has Been Sent!</p>
+      <p>Your message has been sent</p>
    
     </div>
   </div>
+  {% endif %}
  {% endblock mainContent %}
  {% block jsLinks %}
  <script>
-    var contModal = document.getElementById("myModalCont");
-  var form = document.getElementById("formContact");
-  
-  // Listen for the form's submit event
-  form.addEventListener("submit", function(event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-    
-    // Show the modal when the form is submitted
-    contModal.classList.add("showCont");
-    
-    // Hide the modal after 4 seconds
-    setTimeout(function() {
-      contModal.classList.remove("showCont");
-    }, 3000);
-  });</script>
+  var contModal = document.getElementById("myModalCont");
+var form = document.getElementById("formContact");
+
+// Show the modal when the form is submitted
+contModal.classList.add("showCont");
+
+// Hide the modal after 4 seconds
+setTimeout(function() {
+  contModal.classList.remove("showCont");
+}, 3000);
+</script>
  {% endblock %}
