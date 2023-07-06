@@ -2109,12 +2109,15 @@ a:focus::after {
 	font-size: 45px !important;
 	/* padding-bottom: 1%; */
 }
+.accordion-body p{
+	text-align: justify !important;
+}
 .card-text{
 	font-weight: bolder;
-	color: white !important;
+	color: rgb(19, 18, 18) !important;
 }
 .card-title{
-	color: white;
+	color: var(--theme-color);
 }
 .faq {
 	height: 100%;
@@ -2132,7 +2135,7 @@ a:focus::after {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: rgb(42, 42, 150);
+		background: rgb(0, 0, 8);
 		z-index: -1;
 		opacity: 0.2;
 		width: 90%;
@@ -2140,10 +2143,11 @@ a:focus::after {
 		left: 5%;
 	  }
 
-.about h4 a, .events h4 a,.our-webcoderskull h4 a,h6 a{
+.about h4 a, .events h4 a,.our-webcoderskull h4 a,h6 a, .CompHeading{
 	font-size: 40px;
 	font-weight: bolder;
 	text-transform: uppercase;
+	color: white;
 }
 
 #home-top {
@@ -2188,7 +2192,7 @@ position: relative;
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: rgb(42, 42, 150);
+	background: rgb(0, 0, 19);
 	z-index: -1;
 	border-radius: 30px;
 	/* transition: 0.5s ease-in-out; */
@@ -2257,7 +2261,7 @@ position: relative;
 		position: absolute;
 		top: 0;
 		left: 0;
-		background:  rgb(42, 42, 150);
+		background:  rgb(0, 0, 12);
 		z-index: -1;
 		opacity: 0.2;
 		width: 90%;
@@ -2270,8 +2274,8 @@ position: relative;
 	width: 190px;
 	height: 350px;
 	border-radius: 20px;
-	background-image: linear-gradient(to right, #7ea9b1, #88c4b1) !important;
-	/* background: #f5f5f5; */
+	/* background-image: linear-gradient(to right, #7ea9b1, #88c4b1) !important; */
+	background: rgb(156,201,214);
 	position: relative;
 	padding: 1.8rem;
 	border: 2px solid #c3c6ce;
@@ -2561,7 +2565,7 @@ ul {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: rgb(42, 42, 150);
+		background: rgb(0, 0, 14);
 		z-index: -1;
 		opacity: 0.2;
 		width: 90%;
@@ -3089,8 +3093,12 @@ tbody tr td a:hover{
 	text-align: center;
 }
 
+
+#gallery h1{
+	font-weight: bolder;
+}
 h1 {
-	font-size: 50px;
+	font-size: 45px;
 }
 
 .gallery-home-content button {
@@ -3102,13 +3110,27 @@ h1 {
 	/* overflow: hidden; */
 }
 
-#gallery {
+/* #gallery {
 	margin-top: -62px;
-	background-image: url(../media/static-images/gallery-bg.jpg);
+	background-image: url(../media/static-images/gallerybg1.jpg);
 	height: 80vh;
 	background-repeat: no-repeat;
 	/* animation: changeBg 5s es infinite alternate; */
-	background-size: cover;
+	/* background-size: cover;
+} */ 
+#gallery::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url("../media/static-images/gallerybg1.jpg") no-repeat center/cover;
+	z-index: -1;
+	opacity: 0.8;
+	width: 100%;
+	height: 90%;
+}
+#gallery {
+	height: 80vh;
 }
 
 /* album */
@@ -3125,9 +3147,14 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 30px;
+	
 	flex-direction: column;
-	margin-bottom: 100px;
+	margin-bottom: 60px;
+	padding-top: 32px;
 }
+
+
 
 .gallery-cover {
 	position: relative;
@@ -3155,11 +3182,17 @@ h1 {
 	width: 100%;
 	height: 100%;
 	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(91 65 65 / 70%);
 	color: #fff;
 	transition: bottom 0.3s ease-in-out;
 }
-
+.gallery-cover-text h2{
+	font-size: 35px;
+	font-weight: bold;
+}
+.gallery-cover-text p{
+	font-weight: bold;
+}
 .gallery-cover .gallery-cover-text {
 	bottom: 0;
 }
@@ -4376,6 +4409,7 @@ font-size: 1.2em;
 }
 .events-header h5 {
 	margin-right: 10px !important;
+	color: white !important;
 }
 #event-nav {
 	z-index: 1;
@@ -4437,6 +4471,9 @@ font-size: 1.2em;
 
 .upcoming-events-text {
 	font-size: 18px;
+}
+.modalJustify{
+	text-align: justify;
 }
 
 /* events cover */

@@ -21,19 +21,19 @@ href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 
 <div id="gallery">
     <div class="gallery-home-content text-light position-absolute top-50 start-50 translate-middle">
-        <h1>Welcome</h1>
-        <h1>Coder's Club Gallery</h1>
+        <h1>Welcome to Coder's Club Gallery</h1>
+       
     </div>
 </div>
 
-<h1 class="text-center my-4">Competitions Glimps</h1>
+<h1 class="text-center CompHeading mt-5">Competitions Glimps</h1>
 {% for item in allgallery_post  %}
-<div class="gallery-album text-center mt-4">
+<div class="gallery-album  text-center mt-2">
     
     <div class="gallery-cover">
         <div class="gallery-cover-image" style="background: url('/media/{{item.cover_image}}') no-repeat center center/cover;"></div>
         <div class="gallery-cover-text d-flex justify-content-center align-item-center flex-column">
-            <h2 class="fs-1">{{item.event}}</h2>
+            <h2 class="">{{item.event}}</h2>
             <p class="fs-5">{{item.title}}</p>
             <p class="fs-6">
                 {{item.second_title}}
@@ -70,7 +70,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
                     </div>
                 </div>
                 <a href="galleryselected/{{item.Gallery_slug}}"
-                    ><button class="btn RegBtn mt-3" id="webbtn">
+                    ><button class="btn RegBtn mt-5" id="webbtn">
                         View More
                     </button></a>
             </div>
