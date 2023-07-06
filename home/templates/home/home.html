@@ -17,9 +17,9 @@
     </div>
   </div>
 
-  <div class="about mt-3">
+  <div class="about my-5 py-4">
 
-    <h4 class=" text-center py-4 "><a class="text-color-theme text-decoration-none">About Us</a></h4>
+    <h4 class=" text-center "><a class="text-color-theme text-decoration-none">About Us</a></h4>
     <div class="d-flex justify-content-center mx-auto flex-wrap">
       <div id="left-about">
         <h1 class="text-color-theme">Take your Experience</h1>
@@ -28,7 +28,7 @@
           Welcome to our coding club! We are a community of like-minded individuals who share a passion for technology and programming. Our goal is to provide a supportive and inclusive space for people of all skill levels to learn, practice, and collaborate on coding projects. Whether you're a seasoned developer or just starting out, we welcome you to join us on our journey to explore the vast world of computer programming. We offer regular meetings, workshops, and hackathons where members can learn new skills, share ideas, and work together on exciting projects. Come join us and discover the thrill of coding!
         </p>
         <a href="{% url 'about' %}">
-        <button type="button" class="btn RegBtn">Read More</button>
+        <button type="button" class="btn RegBtn">About Us</button>
         </a>
       </div>
       <div id="right-about">
@@ -40,12 +40,12 @@
   <br>
 <div class="smallLine"></div>
 <br>
-  <div class="events align-center">
-    <h4 class="text-center py-3 "><a class="text-color-theme text-decoration-none">Our Events</a></h4>
+  <div class="events align-center my-5 py-4">
+    <h4 class="text-center pb-3"><a class="text-color-theme text-decoration-none">Our Events</a></h4>
     <div class="event-body d-flex justify-content-center mx-auto flex-wrap">
       {% for item in allgallery_post  %}
       <div class="event-card" style="width: 18rem;">
-       <img alt="..." class="card-img-top" src="/media/{{item.cover_image}}"/>
+       <img alt="..." class="card-img-top" style="width: 80%;" src="/media/{{item.cover_image}}"/>
        <div class="card-details">
         <h5 class="text-title mt-3 card-title">
          {{item.event}}
@@ -91,7 +91,7 @@
       </div> -->
 
     </div>
-    <div class="d-flex justify-content-center pt-3 pb-4">
+    <div class="d-flex justify-content-center pt-5 pb-4">
       <button type="button" class="btn RegBtn ">More Events</button>
     </div>
   </div>
@@ -154,8 +154,8 @@
   </section> -->
 
   <!-- our team section -->
-  <section class="our-webcoderskull">
-    <h4 class="text-center py-3 "><a class="text-color-theme text-decoration-none">Our Team</a></h4>
+  <section class="our-webcoderskull my-5 py-4">
+    <h4 class="text-center  pb-3"><a class="text-color-theme text-decoration-none">Our Team</a></h4>
     <div class="container">
       <div class="row ourTeamRow heading heading-icon ">
       </div>
@@ -217,7 +217,7 @@
   <!-- <div class="smallLine"></div> -->
 
   <!-- FAQ section -->
-  <div class="faq mb-4 pt-4">
+  <div class="faq my-5 pt-3">
     <h6 class="text-center"><a class="text-color-theme text-decoration-none">FAQs</a></h6>
     <div class="d-flex justify-content-evenly mx-auto flex-wrap">
       <div id="left-faq">
@@ -226,36 +226,36 @@
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                What is Koders Club and how can we join it?
+                Who can join a coding club?
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+               <p> Coding clubs are typically open to anyone with an interest in coding or programming. They may cater to various age groups and skill levels, from students and beginners to professionals and experienced coders. Some coding clubs may have specific requirements or target specific demographics, but many are inclusive and welcome anyone who wants to learn and engage with coding.</p>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
+                What activities are typically conducted in a coding club?
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+               <p> Coding clubs organize a variety of activities to support learning and skill development. These can include coding challenges or competitions, group coding projects, workshops or tutorials on specific programming languages or concepts, guest lectures by industry professionals, and collaborative problem-solving sessions. Some coding clubs may also participate in coding hackathons, attend tech conferences, or invite guest speakers from the industry.</p>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Accordion Item #3
+                How can joining a coding club benefit me?
               </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div id="collapseThree" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body" >
+                <p> Joining a coding club can have several advantages. It provides a supportive and collaborative community where you can learn from others and enhance your coding skills. You can gain practical coding experience through hands-on projects and challenges. Coding clubs often foster networking opportunities, allowing you to connect with like-minded individuals, potential mentors, or even future employers. Additionally, being part of a coding club can enhance your problem-solving abilities, improve your understanding of programming concepts, and expose you to different programming languages and technologies.</p>
               </div>
             </div>
           </div>
