@@ -43,6 +43,12 @@ nav {
 	width: 80%;
 }
 
+#logo{
+	filter: brightness(0) invert(1);
+	height: 50px;
+}
+
+
 #nav-buttons a{
 text-decoration: none;
 }
@@ -2093,7 +2099,7 @@ div.CompPara-left p {
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #f31414;
+	background-color: white;
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
 }
@@ -2283,6 +2289,11 @@ position: relative;
 	overflow: visible;
 	text-align: center;
 	
+}
+
+.card-img-top{
+	width: 230px !important;
+    height: 170px;
 }
 
 .card-details {
@@ -3174,16 +3185,18 @@ h1 {
 	background-size: cover;
 	width: 100%;
 	height: 100%;
+	opacity: .6;
 }
 
 .gallery-cover-text {
+	
 	position: absolute;
 	/* bottom: -100%; */
 	width: 100%;
 	height: 100%;
-	padding: 20px;
-	background-color: rgb(91 65 65 / 70%);
-	color: #fff;
+	padding: 70px;
+	background-color: rgb(91 65 65 / 30%);
+	color: white;
 	transition: bottom 0.3s ease-in-out;
 }
 .gallery-cover-text h2{

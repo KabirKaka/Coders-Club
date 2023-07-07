@@ -6,7 +6,7 @@ function toggleMenu() {
 }
 
 // image slider
-
+console.log("i am javascript file")
 var swiper = new Swiper(".slide-content", {
 	slidesPerView: 3,
 	spaceBetween: 25,
@@ -197,10 +197,12 @@ const createCounter = (date, event, button) => {
 live_events = document.getElementsByClassName("timer");
 live_events_buttons = document.getElementsByClassName("challenge-button");
 live_events_time = [
-	"2023-05-28T06:05:30",
-	"2023-05-20T23:59:59",
-	"2023-04-22T23:59:59",
-	"2023-04-29T23:59:59",
+	"2023-07-28T06:05:30",
+	"2023-07-28T06:05:30",
+	"2023-07-28T06:05:30",
+	"2023-07-14T23:59:59",
+	"2023-07-22T23:59:59",
+	"2023-07-29T23:59:59",
 ];
 for (let index = 0; index < live_events.length; index++) {
 	createCounter(
