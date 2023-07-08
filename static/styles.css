@@ -647,6 +647,7 @@ text-decoration: none;
 	color: #fcfcff;
 	font-weight: bolder;
 	font-size: 60px !important;
+	text-transform: uppercase;
 }
 #sponPara {
 	text-align: center;
@@ -672,7 +673,7 @@ text-decoration: none;
 	background: url("../media/static-images/Sponsors/s6.jpg") no-repeat center
 		center/cover;
 	z-index: -1;
-	opacity: 0.7;
+	opacity: 0.8;
 	width: 100%;
 	height: 90%;
 }
@@ -1225,6 +1226,17 @@ text-decoration: none;
 	/* width:100%; */
 	overflow: hidden;
 }
+.blogLinkCard{
+	text-decoration: none;
+	color: #fbfbff;
+	font-weight: bolder;
+}
+.text-justify{
+	text-align: justify;
+}
+.blogLinkCard:hover{
+	text-decoration: underline;
+}
 .Blog_Section {
 	top: 45px;
 	position: relative;
@@ -1296,7 +1308,7 @@ text-decoration: none;
 	left: 0;
 	background: url("../media/static-images/Blog/b16.png") no-repeat center/cover;
 	z-index: -1;
-	opacity: 0.9;
+	opacity: 0.6;
 	width: 100%;
 	height: 90%;
 }
@@ -1305,6 +1317,9 @@ text-decoration: none;
 }
 #blog-top h1 {
 	font-weight: bolder;
+	font-size: 45px;
+	font-weight: bolder;
+	text-transform: uppercase;
 }
 
 #landing-header {
@@ -3104,9 +3119,13 @@ tbody tr td a:hover{
 	text-align: center;
 }
 
-
+.CompHeading{
+	
+	background-image: linear-gradient(rgb(129, 129, 228),rgb(51, 104, 98));
+}
 #gallery h1{
 	font-weight: bolder;
+	text-transform: uppercase;
 }
 h1 {
 	font-size: 45px;
@@ -3960,14 +3979,15 @@ font-size: 1.2em;
 }
 /* text Blog */
 .blogContainer {
-	margin-top: 45px;
+	/* margin-top: 45px; */
 	margin-bottom: 45px;
 }
 .blogText p {
 	/* display: block; */
 	/* margin: auto; */
 	/* width: 85%; */
-	font-size: 1.5rem;
+	font-size: 1.3rem;
+	color: white ;
 	/* margin-bottom: 30px !important; */
 }
 .blogText {
@@ -3998,10 +4018,16 @@ font-size: 1.2em;
 	height: 80%;
 }
 #blogPage-top {
-	height: 80vh;
+	height: 76vh;
+}
+.selectedBlogHeading{
+	font-size: 35px !important;
+	font-weight: bolder;
 }
 #blogPage-top h1 {
 	font-weight: bolder !important;
+	font-size: 45px !important;
+	text-transform: uppercase;
 }
 #blogPage-top h4 {
 	/* font-weight: bolder !important; */
@@ -4071,15 +4097,15 @@ font-size: 1.2em;
 	flex: 1 1 auto;
 }
 .authorBox {
-	padding-left: 74px;
+	margin-left: 57px !important;
 	margin-top: 22px;
 	margin-bottom: 20px;
 }
 .smallBarBlog {
-	border-top: 1px solid grey;
+	border-top: 1px solid rgb(255, 255, 255);
 	display: block;
-	width: 70%;
-	margin-left: 15%;
+	width: 85%;
+	margin-left: 7.4%;
 }
 .u-flex1 div {
 	font-size: 20px !important;
@@ -4406,7 +4432,9 @@ font-size: 1.2em;
 }
 
 .cover-text {
-	font-size: 50px;
+	font-size: 45px !important;
+	text-transform: uppercase;
+	font-weight: bolder;
 }
 
 .events-header {
@@ -4414,15 +4442,17 @@ font-size: 1.2em;
 	margin-bottom: 15px;
 }
 .events-header hr {
-	background-color: rgb(146, 124, 207);
+	background-color: rgb(242, 242, 245);
 	width: 75%;
-	height: 8px;
+	height: 6px;
 	margin: auto;
 	margin-left: 0;
+	opacity: 0.7 !important;
 }
 .events-header h5 {
 	margin-right: 10px !important;
 	color: white !important;
+	font-weight: bolder;
 }
 #event-nav {
 	z-index: 1;
@@ -4438,6 +4468,7 @@ font-size: 1.2em;
 	text-decoration: none;
 	margin: 0 10px;
 	color: white;
+	font-weight: bolder;
 }
 #event-nav a:hover {
 	transform: scale(1.09);
@@ -4516,16 +4547,17 @@ font-size: 1.2em;
 	background: url(../media/static-images/events/event-cover.png) no-repeat
 		center/cover;
 	z-index: -1;
-	opacity: 0.9;
+	opacity: 1;
 	width: 100%;
 	height: 95%;
-	filter: brightness(50%);
+	filter: brightness(68%);
 }
 #events-cover {
 	height: 80vh;
 }
 #events-cover h1 {
 	font-weight: bolder;
+	text-transform: uppercase;
 }
 
 /* About Us Page CSS */

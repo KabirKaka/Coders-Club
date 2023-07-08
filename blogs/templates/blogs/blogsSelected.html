@@ -23,7 +23,7 @@
 <div id="blogPage-top">
   <div class="home-content text-light position-absolute start-50 translate-middle" style="top: 260px !important;">
     <h1>{{post_selected.title}}</h1>
-    <h2>{{post_selected.Subtitle}}</h2>
+    <h2 class="text-uppercase">{{post_selected.Subtitle}}</h2>
     <!-- <h4>BY {{post_selected.author}}<span class="text-muted dateBlog">  Dated: {{post_selected.timeStamp}}</span></h4> -->
 
   </div>
@@ -49,14 +49,14 @@
 
           <!--<img src="/media/{{post_selected.blog_image}}" class="blogImg" alt="">-->
           <div class="blogText">
-          <h2>{{post_selected.first_heading}}</h2>
-          <p >{{post_selected.first_paragraph}}</p>
+          <h2 class="text-light selectedBlogHeading">{{post_selected.first_heading}}</h2>
+          <p class="text-justify">{{post_selected.first_paragraph}}</p>
         </div>
           <img src="/media/{{post_selected.blog_image}}" class="blogImg" alt="">
 
           <div class="blogText">
-            <h2>{{post_selected.second_heading}}</h2>
-            <p >{{post_selected.second_paragraph}}</p>
+            <h2 class="text-light selectedBlogHeading">{{post_selected.second_heading}}</h2>
+            <p class="text-justify">{{post_selected.second_paragraph}}</p>
           </div>
 
           <p class="blogCode">
@@ -93,9 +93,9 @@ document.getElementById('table-container').appendChild(table);
           <div class="u-flexCenter">
             <div class="u-flex0"><a class="avatar" href="#"><img src="{{MEDIA_URL}}static-images/Sponsors/s1.jpg" class="avatar-image avatar-image--small" alt=""></a></div>
             <div class="u-flex1 u-paddingLeft15">
-              <div><a href="#">Koders Club 2023</a></div>
-              <div>Founder of @BTC Coders</div>
-              <div><time datetime="2017-11-13T17:30:12.732Z">{{post_selected.timeStamp}}</time> &middot; <span class="readingTime">5 mins read</span></div>
+              <div><a href="#" class=" blogLinkCard">Koders Club 2023</a></div>
+              <div class="text-light">Founder of @BTC Coders</div>
+              <div class="text-light"><time datetime="2017-11-13T17:30:12.732Z">{{post_selected.timeStamp}}</time> &middot; <span class="readingTime">5 mins read</span></div>
             </div>
           </div>
         </div>
