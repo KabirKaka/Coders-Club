@@ -59,10 +59,10 @@
                           <input type="text" name="portfolio_link" id="form3Example20" class="form-control formFiSize form-control-lg" placeholder="Portfolio Link"/>                        
                       </div>
             </div>
-            <div class="col-md-6 mb-4 form-outline">
-              <select name="domains" class="form-control formFiSize multi-select selectpicker" multiple aria-label="default select example" placeholder="Select Domain(s)"  data-live-search="true" required >
+            <div  class="col-md-6 mb-4 form-outline">
+              <select  name="domains" class="form-control formFiSize multi-select selectpicker" multiple aria-label="default select example" placeholder="Select Domain(s)"  data-live-search="true" required >
                     {% for domain in domains %}
-                        <option value="{{ domain.name }}">{{ domain.name }}</option>
+                        <option   value="{{ domain.name }}">{{ domain.name }}</option>
                     {% endfor %}            
                 </select>
           </div>
@@ -211,4 +211,6 @@
   
   
   </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+
   {% endblock jsLinks %}
