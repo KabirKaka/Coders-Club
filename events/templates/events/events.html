@@ -16,7 +16,7 @@
   >
       <h1 class="m-0">Change Igniters</h1>
       <h1 class="cover-text m-0" >Events</h1>
-      <div class="challenge-button justify-content-center d-flex mt-4">
+      <div class=" justify-content-center d-flex mt-4">
         <a href="{% url 'events-leaderboard' %}" class="btn RegBtn">VIEW LEADEROARD</a>
     </div>
   </div>
@@ -563,11 +563,12 @@
 </div>
 
     <!-- Modals -->
+    {% for event_copy in events_copy %}
     <div class="modal modalJustify fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content" style="padding: 30px;">
             <div class="modal-header">
-              <h1 class="modal-title " id="exampleModalLabel">Flutter Coding</h1>
+              <h1 class="modal-title " id="exampleModalLabel">{{event_copy.name}}</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -586,7 +587,7 @@
                 <div class="col12">
                     <span class="headingModal">Full Details:</span>
                    
-                    <p class="detailsModal mt-2">Participating in a Flutter coding competition can be an excellent opportunity for students to learn new skills, gain practical experience in mobile app development, and connect with other developers and industry experts. It can be a great way to showcase their talents and potentially win prizes or recognition. Moreover, participating in a competition can help students to build their resumes, demonstrate their ability to work under pressure and meet deadlines, and ultimately enhance their chances of success in their careers.</p>
+                    <p class="detailsModal mt-2">{{event_copy.description}}</p>
                 </div>
               </div>           
             </div>
@@ -597,6 +598,7 @@
           </div>
         </div>
       </div>
+      {% endfor %}
       <div class="modal modalJustify fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content" style="padding: 30px;">
@@ -733,7 +735,107 @@
           </div>
         </div>
       </div>
-      {% endblock mainContent %}
-      {% block jsLinks %}
       
+      {% endblock mainContent %}
+      
+      {% block jsLinks %}
+      <script>
+        // timer
+const createCounter = (date, event, button) => {
+	// Set the deadline date and time
+	var deadline = new Date(date);
+
+	// Update the timer every second
+	var x = setInterval(function () {
+		// Get the current date and time
+		var now = new Date().getTime();
+
+		// Calculate the time remaining between the deadline and the current date and time
+		var timeRemaining = deadline - now;
+
+		// Calculate the days, hours, minutes, and seconds remaining
+		var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+		var hours = Math.floor(
+			(timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+		);
+		var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+		// Update the HTML with the remaining time
+
+		event.innerHTML = `<div id="days" class="inline-block">
+											<div id="days-1" class="inline-block large dark">${days
+												.toString()
+												.charAt(0)}</div>
+											<div id="days-0" class="inline-block large dark">${days
+												.toString()
+												.charAt(1)}</div>
+											<div id="colon" class="inline-block large dark">:</div>
+											<div id="days-text">Days</div>
+										</div>
+										<div id="hours" class="inline-block">
+											<div id="hours-1" class="inline-block large dark">${hours
+												.toString()
+												.charAt(0)}</div>
+											<div id="hours-0" class="inline-block large dark">${hours
+												.toString()
+												.charAt(1)}</div>
+											<div id="colon" class="inline-block large dark">:</div>
+											<div id="hours-text">Hours</div>
+										</div>
+										<div id="minutes" class="inline-block align-left">
+											<div id="minutes-1" class="inline-block large dark">
+                      ${minutes.toString().charAt(0)}
+											</div>
+											<div id="minutes-0" class="inline-block large dark">
+                      ${minutes.toString().charAt(1)}
+											</div>
+											<div id="colon" class="inline-block large dark">:</div>
+											<div id="minutes-text">Minutes</div>
+										</div>
+										<div id="seconds" class="inline-block align-left">
+											<div id="seconds-1" class="inline-block large dark">
+                      ${seconds.toString().charAt(0)}
+											</div>
+											<div id="seconds-0" class="inline-block large dark">
+                      ${seconds.toString().charAt(1)}
+											</div>
+											<div id="seconds-text">Seconds</div>
+										</div>`;
+
+		// If the countdown is finished, display a message
+		if (timeRemaining < 0) {
+			clearInterval(x);
+			event.innerHTML = `<div class="text-15">
+    We are no longer accepting entries. Thank you for your generous interest.
+</div>`;
+			button.innerHTML = "";
+			// event.previousElementSibling.innerHTML = "";
+			event.previousElementSibling.style.visibility = "hidden";
+			// event.style.visibility = "hidden";
+		}
+	}, 1000);
+};
+
+live_events = document.getElementsByClassName("timer");
+live_events_buttons = document.getElementsByClassName("challenge-button");
+live_events_time = [
+	"2023-07-09T06:05:30",
+	"2023-07-14T06:05:30",
+	"2023-07-12T06:05:30",
+	"2023-07-14T23:59:59",
+	"2023-07-09T23:59:59",
+	"2023-07-12T23:59:59",
+];
+console.log(live_events_time)
+console.log(live_events_buttons)
+console.log(live_events)
+for (let index = 0; index < live_events.length; index++) {
+	createCounter(
+		live_events_time[index],
+		live_events[index],
+		live_events_buttons[index]
+	);
+}
+      </script>
 {% endblock jsLinks %}
