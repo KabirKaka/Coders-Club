@@ -60,7 +60,7 @@ def register(request):
         if not name or not gender or not city or not category or not batch or not department or not university or not employment_status or not contact_number:
             # Delete user object and return an error message to the user
             user.delete()
-            return render(request, 'accounts/register.html', {'error': 'Please fill in all fields'})
+            return render(request, 'accounts/register.html')
 
         # Create user profile object
         user_profile = UserProfile.objects.create(
@@ -168,7 +168,7 @@ def joinCommunity(request):
 
         club_application.applied_date = timezone.now()
         success_message = "Application submitted!"
-        return render(request, 'accounts/joincommunity.html', {'success': True})
+        return render(request, 'accounts/joincommunity.html', {'success': True,'domains': Domain.objects.all(), 'positions': Position.objects.all()})
     else:
         if not request.user.is_authenticated:
             return redirect('account-login')
