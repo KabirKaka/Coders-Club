@@ -4,7 +4,7 @@ from .models import EventParticipation, Team, Event
 from django.contrib.auth.models import User
 
 def home(request):
-    return render(request, "events/events.html", {'events': Event.objects.all()})
+    return render(request, "events/events.html", {'events': Event.objects.all(), 'events_copy': Event.objects.all()})
 
 
 def leaderboard(request):
