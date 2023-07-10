@@ -6,7 +6,15 @@
 <body>
  {% endblock cssLinksAndTitle %}
 {% block mainContent %}
-  <div id="home-top">
+<div id="home-top">
+    {% if success %}
+      <div id="myModalCont" class="modalCont">
+        <div class="modal-content-cont">
+          <img src="{{MEDIA_URL}}static-images/contactSection/gif1.gif" alt="" />
+          <p>Registered successfully.</p>
+        </div>
+      </div>
+      {% endif %} 
     <div class="home-content text-light position-absolute top-50 start-50 translate-middle">
       <h6><a class=" text-decoration-none text-white">Change Igniters</a></h6>
       <h1>Embrace change &</h1>
@@ -16,7 +24,6 @@
       </a>
     </div>
   </div>
-<!-- rgb(42, 42, 150) previous colors of specific div -->
   <div class="about my-4 py-4">
 
     <h4 class=" text-center "><a class="text-color-theme text-decoration-none">About Us</a></h4>
@@ -32,7 +39,6 @@
         </a>
       </div>
       <div id="right-about">
-        <!-- <img  id="right-about-img1" src="{{ MEDIA_URL }}static-images/home/logo.png" alt="" /> -->
         <img  id="right-about-img2" src="{{ MEDIA_URL }}static-images/home/ab1.jpg" alt="" />
       </div>
     </div>
@@ -57,39 +63,6 @@
       </div>
       {% endfor %}
 
-      <!-- <div class="event-card" style="width: 18rem;">
-        <img src="{{ MEDIA_URL }}static-images/home/home2.png" class="card-img-top" alt="...">
-        <div class="card-details">
-          <h5 class="text-title mt-3">FlutterKode</h5>
-          <p class="text-body">A competition of Flutter App Development</p>
-          
-        </div>
-      </div>
-      <div class="event-card" style="width: 18rem;">
-        <img src="{{ MEDIA_URL }}static-images/home/home1.jpg" class="card-img-top" alt="...">
-        <div class="card-details">
-          <h5 class="text-title mt-3">WebKode</h5>
-          <p class="text-body">A competition of Website Development</p>
-      
-        </div>
-      </div>
-      <div class="event-card" style="width: 18rem;">
-        <img src="{{ MEDIA_URL }}static-images/home/home4.jpg" class="card-img-top" alt="...">
-        <div class="card-details">
-          <h5 class="text-title mt-3">Speed Programming</h5>
-          <p class="text-body ">A competition of Flutter App Development</p>
-        </div>
-      </div> -->
-
-      <!-- for card reference -->
-      <!-- <div class="card">
-        <div class="card-details">
-          <p class="text-title">FlutterKode</p>
-          <p class="text-body">A competition of Flutter App Development</p>
-        </div>
-        <button class="card-button">More info</button>
-      </div> -->
-
     </div>
     <div class="d-flex justify-content-center pt-5 pb-4">
       <a href="{% url 'events-home' %}"><button type="button" class="btn RegBtn ">More Events</button></a>
@@ -98,62 +71,6 @@
   <br>
   <div class="smallLine"></div>
   <br>
-  <!-- blog section -->
-<!-- 
-  <section class="details-card">
-    <h6 class="text-primary text-center "><a class=" text-decoration-none">Our Blogs </a></h6>
-    <h3 class="text-black text-center my-5">Featured Blogs</h3>
-    <div class="container">
-      <div class="blog_cards d-flex justify-content-center align-item-center flex-wrap mb-0">
-        {% for post in blog_posts %}
-        <div class="card-hover">
-          <div class="card-hover__content">
-            <h3 class="card-hover__title">
-             <b>{{post.title}}</b>
-            </h3>
-            <p class="card-hover__text">{{post.content_summary| truncatechars:130}}</p>
-          </div>
-          <div class="card-hover__extra">
-
-          <a href="blogs/selected/{{post.sno}}" class="btn RegBtn card-hover__link">
-              <span>Read</span>
-              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
-          </div>
-          <img src="/media/{{post.blog_image}}" alt="">
-        </div>
-        {% endfor %} 
-        <!- {% for post in blog_posts  %}
-     <div class="col-md-4 mb-4">
-     <div class="card-content">
-      <div class="card-img">
-       <img alt="" src="/media/{{post.blog_image}}"/>
-      </div>
-      <div class="card-desc">
-       <h3>
-        {{post.title}}
-       </h3>
-       <p>
-       {{post.content_summary| truncatechars:200}}
-       </p>
-       <a class="btn-card bg-primary" href="/blogs/selected/{{post.sno}}">
-        Read
-       </a>
-      </div>
-     </div>
-    </div>
-{% endfor %} 
-      </div>
-
-  </div>
-    <div class=" d-grid gap-2 col-2 mx-auto">
-      <button type="button" class="btn RegBtn">More Blogs</button>
-    </div>
-  </section> -->
-
-  <!-- our team section -->
   <section class="our-webcoderskull my-3 py-4">
     <h4 class="text-center  pb-3"><a class="text-color-theme text-decoration-none">Our Team</a></h4>
     <div class="container">
@@ -264,3 +181,17 @@
     </div>
   </div>
  {% endblock mainContent %}
+ {% block jsLinks %}
+ <script>
+  var contModal = document.getElementById("myModalCont");
+  var form = document.getElementById("formContact");
+
+  // Show the modal when the form is submitted
+  contModal.classList.add("showCont");
+
+  // Hide the modal after 4 seconds
+  setTimeout(function () {
+    contModal.classList.remove("showCont");
+  }, 3000);
+</script>
+{% endblock jsLinks %}

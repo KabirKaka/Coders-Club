@@ -34,7 +34,8 @@ def apply(request):
             event_participation.applied_at = timezone.now()
             event_participation.save()
             success_message = "Application submitted!"
-            return render(request, 'events/apply.html', {'success_message': success_message})
+            events = Event.objects.registration_open()
+            return render(request, 'events/apply.html', {'success': True, 'events': events})
                
         elif participation == 'Team':
             members = request.POST.getlist('members')
@@ -57,7 +58,8 @@ def apply(request):
             event_participation.applied_at = timezone.now()
             event_participation.save()
             success_message = "Application submitted!"
-            return render(request, 'events/apply.html', {'success_message': success_message, 'events': events})            
+            events = Event.objects.registration_open()
+            return render(request, 'events/apply.html', {'success': True, 'events': events})            
     else:
         if not request.user.is_authenticated:
             return redirect('account-login')

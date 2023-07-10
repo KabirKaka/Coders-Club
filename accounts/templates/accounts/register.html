@@ -19,14 +19,6 @@
  <body class="body Reg_Sec" style="background-image:linear-gradient(to bottom right, rgb(2 5 46), rgb(179 203 255))">
   {% endblock body %}
 {% block mainContent %}
-{% if success %}
-  <div id="myModalCont" class="modalCont">
-    <div class="modal-content-cont">
-      <img src="{{MEDIA_URL}}static-images/contactSection/gif1.gif" alt="" />
-      <p>Registered successfully.</p>
-    </div>
-  </div>
-  {% endif %} 
     <section class="h-100 ">
         <div class="container pb-4 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
@@ -434,17 +426,5 @@ showPasswordCheckbox.addEventListener("click", () => {
     passwordInput.type = "password";
   }
 });
-</script>
-<script>
-  var contModal = document.getElementById("myModalCont");
-  var form = document.getElementById("formContact");
-
-  // Show the modal when the form is submitted
-  contModal.classList.add("showCont");
-
-  // Hide the modal after 4 seconds
-  setTimeout(function () {
-    contModal.classList.remove("showCont");
-  }, 3000);
 </script>
 {% endblock jsLinks %}

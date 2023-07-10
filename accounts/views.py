@@ -110,6 +110,7 @@ def register(request):
         )
 
         login_django(request, user)
+        request.session['data'] = {'success': True}
         return redirect('home')
 
     # If this is a GET request (i.e. the user is trying to access the form)
