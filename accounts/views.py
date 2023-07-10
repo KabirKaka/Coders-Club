@@ -6,6 +6,7 @@ from django.views.generic import DetailView
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.utils import timezone
+from coding_club_project.utils import send_email_html
 import os
 
 def save_profile_picture(profile_picture):
@@ -62,6 +63,34 @@ def register(request):
             user.delete()
             return render(request, 'accounts/register.html')
 
+        # Send confirmation email
+        subject = 'Registration Confirmation - Change Igniters'
+
+        html_message = f"""<div  style="background-image: linear-gradient(to right,rgb(209, 209, 240),rgb(207, 240, 207));font-family:Arial, Helvetica, sans-serif ;padding-bottom: 3%;padding-top: 3%;">
+        <div style="margin-left: 12px;margin-right: 22px;padding-left:20%;padding-right: 20%;">
+            <h1 style="color: rgb(5, 43, 148);">Registration Successful- Change Igniters</h1>
+            <h3>Dear {name},</h3>
+            
+            <p style="text-align: left; font-size: 15px;">
+
+                Thank you for registering for <b>Change Igniters</b>, the coding club for aspiring developers. We are thrilled to have you join our community of passionate learners and innovators.
+            </p>
+               <p style="text-align: left; font-size: 15px;"> With Change Igniters, you will gain access to our exclusive resources, coding challenges, workshops, and networking opportunities. Whether you are a beginner or an experienced coder, Change Igniters offers a supportive environment to enhance your coding skills and foster personal growth.
+            </p>
+               <p style="text-align: left; font-size: 15px;"> If you have any questions or need further assistance, feel free to reach out to our team at <b>changeigniters@gmail.com</b>. We are here to help and provide you with the best experience possible.
+            </p>
+               <p style="text-align: left; font-size: 15px;"> We look forward to embarking on this coding journey together and witnessing your growth as a developer. Welcome to Change Igniters!
+               </p>  
+               <p style="text-align: left; font-size: 15px;"><b>Best regards,</b></p>
+               <p style="text-align: left; font-size: 15px;"><b>Team</b></p>
+               <p style="text-align: left; font-size: 15px;"><b>Change Igniters Coding Club - Powered by BTC</b></p>
+
+            <a href="#" style="text-decoration: none;color: rgb(12, 64, 110);">Visit our website for events and competitons</a>
+        </div>
+    </div>"""
+
+        send_email_html(subject, [email], html_message)
+        
         # Create user profile object
         user_profile = UserProfile.objects.create(
             user=user,
@@ -168,7 +197,7 @@ def joinCommunity(request):
 
         club_application.applied_date = timezone.now()
         success_message = "Application submitted!"
-        return render(request, 'accounts/joincommunity.html', {'success': True,'domains': Domain.objects.all(), 'positions': Position.objects.all()})
+        return render(request, 'accounts/joincommunity.html', {'success': True, 'domains': Domain.objects.all(), 'positions': Position.objects.all()})
     else:
         if not request.user.is_authenticated:
             return redirect('account-login')

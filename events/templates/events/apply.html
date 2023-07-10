@@ -18,6 +18,14 @@
     {% endblock body %}
 
 {% block mainContent %}
+{% if success %}
+  <div id="myModalCont" class="modalCont">
+    <div class="modal-content-cont">
+      <img src="{{MEDIA_URL}}static-images/contactSection/gif1.gif" alt="" />
+      <p>Application submitted.</p>
+    </div>
+  </div>
+  {% endif %} 
 <div id="ApplyComp-top">
   <div
     class="home-content text-light position-absolute top-50 start-50 translate-middle"
@@ -162,7 +170,17 @@
 </div>
   {% endblock mainContent %}
 {% block jsLinks %}
+<script>
+  var contModal = document.getElementById("myModalCont");
+  var form = document.getElementById("formContact");
 
+  // Show the modal when the form is submitted
+  contModal.classList.add("showCont");
 
+  // Hide the modal after 4 seconds
+  setTimeout(function () {
+    contModal.classList.remove("showCont");
+  }, 3000);
+</script>
   {% endblock jsLinks %}
   
