@@ -67,7 +67,7 @@ def register(request):
         subject = 'Registration Confirmation - Change Igniters'
 
         html_message = f"""<div  style="background-image: linear-gradient(to right,rgb(209, 209, 240),rgb(207, 240, 207));font-family:Arial, Helvetica, sans-serif ;padding-bottom: 3%;padding-top: 3%;">
-        <div style="margin-left: 12px;margin-right: 22px;padding-left:20%;padding-right: 20%;">
+        <div style="margin-left: 12px;margin-right: 22px;padding-left:4%;padding-right: 4%;">
             <h1 style="color: rgb(5, 43, 148);">Registration Successful- Change Igniters</h1>
             <h3>Dear {name},</h3>
             
