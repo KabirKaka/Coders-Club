@@ -57,7 +57,7 @@ def apply(request):
             event_participation.applied_at = timezone.now()
             event_participation.save()
             success_message = "Application submitted!"
-            return render(request, 'events/apply.html', {'success_message': success_message})            
+            return render(request, 'events/apply.html', {'success_message': success_message, 'events': events})            
     else:
         if not request.user.is_authenticated:
             return redirect('account-login')
