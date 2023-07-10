@@ -61,16 +61,33 @@ def register(request):
         if not name or not gender or not city or not category or not batch or not department or not university or not employment_status or not contact_number:
             # Delete user object and return an error message to the user
             user.delete()
-            return render(request, 'accounts/register.html', {'error': 'Please fill in all fields'})
+            return render(request, 'accounts/register.html')
 
         # Send confirmation email
         subject = 'Registration Confirmation - Change Igniters'
-        message = 'Thank you for registering!'
 
-        html_message = """<div style="background-color: #f2f2f2; padding: 20px; font-family: Arial, sans-serif;">
-        <h1 style="color: #0099cc;">Registration Confirmation - Change Igniters</h1>
-        <p style="color: #333; font-size: 16px;">Thank you for registration</p>
-        </div>""",
+        html_message = f"""<div  style="background-image: linear-gradient(to right,rgb(209, 209, 240),rgb(207, 240, 207));font-family:Arial, Helvetica, sans-serif ;padding-bottom: 3%;padding-top: 3%;">
+        <div style="margin-left: 12px;margin-right: 22px;padding-left:20%;padding-right: 20%;">
+            <h1 style="color: rgb(5, 43, 148);">Registration Successful- Change Igniters</h1>
+            <h3>Dear {name},</h3>
+            
+            <p style="text-align: left; font-size: 15px;">
+
+                Thank you for registering for <b>Change Igniters</b>, the coding club for aspiring developers. We are thrilled to have you join our community of passionate learners and innovators.
+            </p>
+               <p style="text-align: left; font-size: 15px;"> With Change Igniters, you will gain access to our exclusive resources, coding challenges, workshops, and networking opportunities. Whether you are a beginner or an experienced coder, Change Igniters offers a supportive environment to enhance your coding skills and foster personal growth.
+            </p>
+               <p style="text-align: left; font-size: 15px;"> If you have any questions or need further assistance, feel free to reach out to our team at <b>changeigniters@gmail.com</b>. We are here to help and provide you with the best experience possible.
+            </p>
+               <p style="text-align: left; font-size: 15px;"> We look forward to embarking on this coding journey together and witnessing your growth as a developer. Welcome to Change Igniters!
+               </p>  
+               <p style="text-align: left; font-size: 15px;"><b>Best regards,</b></p>
+               <p style="text-align: left; font-size: 15px;"><b>Team</b></p>
+               <p style="text-align: left; font-size: 15px;"><b>Change Igniters Coding Club - Powered by BTC</b></p>
+
+            <a href="#" style="text-decoration: none;color: rgb(12, 64, 110);">Visit our website for events and competitons</a>
+        </div>
+    </div>"""
 
         send_email_html(subject, [email], html_message)
         
@@ -94,14 +111,7 @@ def register(request):
 
         login_django(request, user)
         return redirect('home')
-    subject = 'Registration Confirmation - Change Igniters'
-    message = 'Thank you for registering!'
 
-    html_message = """<div style="background-color: #f2f2f2; padding: 20px; font-family: Arial, sans-serif;">
-        <h1 style="color: #0099cc;">Registration Confirmation - Change Igniters</h1>
-        <p style="color: #333; font-size: 16px;">Thank you for registration</p>
-        </div>"""
-    send_email_html(subject, ["ataibsaboork@gmail.com"], html_message)
     # If this is a GET request (i.e. the user is trying to access the form)
     if not request.user.is_authenticated:
         return render(request, 'accounts/register.html')
@@ -187,7 +197,7 @@ def joinCommunity(request):
 
         club_application.applied_date = timezone.now()
         success_message = "Application submitted!"
-        return render(request, 'accounts/joincommunity.html', {'success': True})
+        return render(request, 'accounts/joincommunity.html', {'success': True, 'domains': Domain.objects.all(), 'positions': Position.objects.all()})
     else:
         if not request.user.is_authenticated:
             return redirect('account-login')
