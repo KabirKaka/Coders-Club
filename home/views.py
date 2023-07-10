@@ -8,6 +8,7 @@ def home(request):
     context = {'blog_posts': BlogPost.objects.all(), 'allgallery_post': Gallery.objects.all()}
     if data:
         context['success'] = data['success']
+        del request.session['data']
     return render(request, "home/home.html", context)
 
 def about(request):
