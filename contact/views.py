@@ -20,14 +20,6 @@ def contact(request):
         contact = Contact(name=name, email=email, subject=subject, message=message)
         contact.submitted_at = timezone.now()
         contact.save()
-        # send_mail(
-        #     'New Contact Form Submission',
-        #     f'You have a new contact form submission from {name} ({email}). \n\nMessage: {message}',
-        #     settings.DEFAULT_FROM_EMAIL,
-        #     [settings.NOTIFY_EMAIL],
-        #     fail_silently=False,
-        # )
-        messages.success(request, 'Your message has been submitted.')
         return render(request, 'contact/contact.html', {"success": True})
     else:
         # Render the contact form
