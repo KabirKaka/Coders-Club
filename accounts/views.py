@@ -187,7 +187,7 @@ def joinCommunity(request):
 
         club_application.applied_date = timezone.now()
         success_message = "Application submitted!"
-        return render(request, 'accounts/joincommunity.html', {'success_message': success_message})
+        return render(request, 'accounts/joincommunity.html', {'success': True})
     else:
         if not request.user.is_authenticated:
             return redirect('account-login')
