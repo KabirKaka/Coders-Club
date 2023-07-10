@@ -2181,7 +2181,6 @@ a:focus::after {
 #home-top::before{
 	content: "";
 	position: absolute;
-	top: 12%;
 	left: 0;
 	background: url("../media/static-images/home/home6.jpg") no-repeat center/cover;
 	z-index: -1;

@@ -6,6 +6,7 @@ from django.views.generic import DetailView
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.utils import timezone
+from coding_club_project.utils import send_email_html
 import os
 
 def save_profile_picture(profile_picture):
@@ -62,6 +63,17 @@ def register(request):
             user.delete()
             return render(request, 'accounts/register.html', {'error': 'Please fill in all fields'})
 
+        # Send confirmation email
+        subject = 'Registration Confirmation - Change Igniters'
+        message = 'Thank you for registering!'
+
+        html_message = """<div style="background-color: #f2f2f2; padding: 20px; font-family: Arial, sans-serif;">
+        <h1 style="color: #0099cc;">Registration Confirmation - Change Igniters</h1>
+        <p style="color: #333; font-size: 16px;">Thank you for registration</p>
+        </div>""",
+
+        send_email_html(subject, [email], html_message)
+        
         # Create user profile object
         user_profile = UserProfile.objects.create(
             user=user,
@@ -82,7 +94,14 @@ def register(request):
 
         login_django(request, user)
         return redirect('home')
+    subject = 'Registration Confirmation - Change Igniters'
+    message = 'Thank you for registering!'
 
+    html_message = """<div style="background-color: #f2f2f2; padding: 20px; font-family: Arial, sans-serif;">
+        <h1 style="color: #0099cc;">Registration Confirmation - Change Igniters</h1>
+        <p style="color: #333; font-size: 16px;">Thank you for registration</p>
+        </div>"""
+    send_email_html(subject, ["ataibsaboork@gmail.com"], html_message)
     # If this is a GET request (i.e. the user is trying to access the form)
     if not request.user.is_authenticated:
         return render(request, 'accounts/register.html')
