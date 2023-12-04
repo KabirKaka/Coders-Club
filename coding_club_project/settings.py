@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-sx$j-lcr(h0%-*d0()n6*ev87+2#&$vvfld#sb1i0nlof)4+go
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".vercel.app", ".now.sh"]
 
 
 # Application definition
@@ -143,3 +143,6 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_P')
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path. join(BASE_DIR, 'staticfiles_build', 'static')
